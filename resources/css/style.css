@@ -1,0 +1,232 @@
+/* =======================
+   Root Variables
+   ======================= */
+:root {
+  /* Fonts */
+  --font-body: "Lato", "Helvetica", "Arial", sans-serif;
+  --font-heading: "Lato", "Helvetica", "Arial", sans-serif;
+  --font-brand: "Playfair Display", "Georgia", "Times New Roman", serif;
+
+  /* Font sizes */
+  --font-size-body: 16px;
+  --font-size-brand: 1.5rem;
+  --font-size-nav-link: 1.125rem;
+  --font-size-btn: 1.125rem;
+
+
+  /* Colors - Light Mode (default) */
+  --color-body-text: #1a1a1a;
+  --color-heading: #254030;
+  --color-bg: #fcfefd;
+  --color-navbar-bg: #e6f0ec;
+  --color-navbar-brand: #254030;
+  --color-navbar-brand-hover: #356E46;
+  --color-navbar-link: #254030;
+  --color-navbar-link-hover: #356E46;
+  --color-nav-link-active: #1f4a44;
+  --color-nav-link-active-hover: #2c5e57;
+  --color-btn-bg: #254030;
+  --color-btn-bg-hover: #356E46;
+  --color-btn-text: #fcfefd;
+  --color-moon-icon: #0c3c6e;
+  --color-moon-icon-hover: #1C5797;
+  --color-focus-shadow: #2c5e57;
+}
+
+/* =======================
+   Dark Mode Variables
+   ======================= */
+body.dark-mode {
+  --color-body-text: #ffffff;
+  --color-heading: #8aa38f;
+  --color-bg: #0f1a0e;
+  --color-navbar-bg: #1b2a18;
+  --color-navbar-brand: #dbe4dc;
+  --color-navbar-brand-hover: #fffdf5;
+  --color-navbar-link: #dbe4dc;
+  --color-navbar-link-hover: #fffdf5;
+  --color-nav-link-active: #d4b87e;
+  --color-nav-link-active-hover: #fffdf5;
+  --color-btn-bg: #dbe4dc;
+  --color-btn-bg-hover: #fffdf5;
+  --color-btn-text: #0f1a0e;
+  --color-moon-icon: #fff3a1;
+  --color-moon-icon-hover: #fffdf5;
+  --color-focus-shadow: #d4b87e;
+}
+
+/* =======================
+   Body & Headings
+   ======================= */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-body-text);
+  background-color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  transition: color 0.3s ease;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
+/* =======================
+   Navbar
+   ======================= */
+.navbar {
+  background-color: var(--color-navbar-bg);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: var(--font-brand);
+  font-weight: bold;
+  font-size: var(--font-size-brand);
+  color: var(--color-navbar-brand);
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--color-navbar-brand-hover);
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .btn {
+  font-size: var(--font-size-nav-link);
+  color: var(--color-navbar-link);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .btn:hover {
+  color: var(--color-navbar-link-hover);
+}
+
+.nav-link:focus-visible {
+  color: var(--color-navbar-link-hover);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
+.navbar-brand.active,
+.navbar-nav .nav-link.active {
+  color: var(--color-nav-link-active);
+}
+
+.navbar-brand.active:hover,
+.navbar-nav .nav-link.active:hover {
+  color: var(--color-nav-link-active-hover);
+}
+
+.navbar-brand.active:focus-visible,
+.navbar-nav .nav-link.active:focus-visible {
+  color: var(--color-nav-link-active-hover);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
+/* Dark mode nav link specificity */
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .navbar-nav .btn {
+  color: var(--color-navbar-link);
+}
+
+body.dark-mode .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-nav .btn:hover {
+  color: var(--color-navbar-link-hover);
+}
+
+/* =======================
+   Primary Buttons
+   ======================= */
+
+.btn.btn-primary {
+  font-size: var(--font-size-btn);
+  background-color: var(--color-btn-bg);
+  border-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-btn-bg-hover);
+  border-color: var(--color-btn-bg-hover);
+  color: var(--color-btn-text);
+}
+
+.btn.btn-primary:focus-visible {
+  background-color: var(--color-btn-bg-hover);
+  border-color: var(--color-btn-bg-hover);
+  color: var(--color-btn-text);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
+/* =======================
+   Menu Toggle Button
+   ======================= */
+#menuToggle {
+  box-shadow: none;
+  border-color: var(--color-btn-bg);
+  color: var(--color-btn-bg);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+#menuToggle i {
+  font-size: 1.75rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+#menuToggle:hover {
+  background-color: var(--color-btn-bg-hover);
+  color: var(--color-btn-text);
+}
+
+#menuToggle:focus-visible {
+  background-color: var(--color-btn-bg-hover);
+  color: var(--color-btn-text);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
+#toggleContainer {
+  min-width: 100px;
+}
+
+/* =======================
+   Dark Mode Toggle Button
+   ======================= */
+
+#darkModeToggleMobile i,
+#darkModeToggleDesktop i {
+  color: var(--color-moon-icon);
+  transition: color 0.3s ease;
+}
+
+#darkModeToggleMobile:hover i,
+#darkModeToggleDesktop:hover i,
+#darkModeToggleMobile:focus-visible i,
+#darkModeToggleDesktop:focus-visible i {
+  color: var(--color-moon-icon-hover);
+}
+
+#darkModeToggleMobile:focus-visible,
+#darkModeToggleDesktop:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
