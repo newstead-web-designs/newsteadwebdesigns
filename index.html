@@ -83,13 +83,108 @@
   </header>
 
   <!-- Main content with top padding to avoid sticky navbar overlap -->
-  <main class="pt-5 pt-lg-0">
+  <main id="main">
     <!-- Page sections go here -->
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <!-- Footer content -->
+<!-- Footer -->
+  <footer  class="container-fluid">
+
+    <!-- Top Section: Brand, Links, Contact -->
+    <section class="container-fluid py-5 border-bottom border-secondary">
+      <div class="row gy-4">
+
+        <!-- Column 1: Brand & CTA --> 
+        <div class="col-12 col-md-4 d-flex flex-column">
+          <a href="index.html" class="navbar-brand d-flex align-items-center ms-1 mb-3">Newstead Web Designs</a>
+          <p class="col-8 ms-1 mb-3">We code, host, and maintain websites from Launceston, Tasmania for small businesses Australia-wide.</p>
+          <div class="mt-2">
+            <a class="btn btn-primary btn-sm rounded-pill mt-auto" href="contact.html" role="button">Get
+              Started</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-12 col-md-4 d-flex flex-column">
+          <nav aria-label="Footer quick links">
+            <ul class="nav flex-column ms-1 mb-3 gap-3">
+              <li class="nav-item"><a class="px-0 py-1" href="about.html">About</a></li>
+              <li class="nav-item"><a class="px-0 py-1" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="px-0 py-1" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="px-0 py-1" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item"><a class="px-0 py-1" href="#main">Back to Top</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Column 3: Contact & Social -->
+        <div class="col-12 col-md-4">
+          <ul class="list-unstyled ms-1 mb-3">
+
+            <!-- Email -->
+            <li class="d-flex align-items-start mb-2">
+              <a href="mailto:info@example.com" class="text-decoration-none">
+                <span class="me-2"><i class="fa-solid fa-envelope"></i></span>
+                hello@newsteadwebdesigns.com.au
+              </a>
+            </li>
+
+            <!-- Location -->
+            <address class="d-flex align-items-start mb-2">
+              <a href="https://www.google.com/maps/place/Launceston+TAS/@-41.4345117,146.9805719,12z/data=!3m1!4b1!4m6!3m5!1s0xaa7a0a35aa0653f9:0x403c94dd0de0f40!8m2!3d-41.4332215!4d147.1440875!16s%2Fm%2F026wfwk?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                <span class="me-2"><i class="fa-solid fa-location-dot"></i></span>
+                Launceston, Tasmania, Australia
+              </a>
+            </address>
+          </ul>
+
+          <!-- Social Links -->
+          <div class="d-flex gap-3 ms-1 mt-auto">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Section: Legal + Credit + Acknowledgment -->
+    <section class="container-fluid py-3">
+      <div class="row gy-2 gy-md-0 justify-content-between align-items-center">
+
+        <!-- Copyright -->
+        <div class="col-12 col-md-auto text-start small">
+         &copy; <span id="year"></span> Newstead Web Designs
+        </div>
+
+        <!-- Policies -->
+        <div class="col-12 col-md-auto text-start small">
+          <a class="me-2" href="policy.html">Privacy Policy</a>
+          <a class="mx-2" href="terms.html">Terms & Conditions</a>
+        </div>
+
+        <!-- Website Credit -->
+        <div class="col-12 text-start small mt-3">
+          Website by <a href="#" target="_blank" rel="noopener noreferrer"
+            class="text-decoration-none">Newstead Web Designs</a>
+        </div>
+
+        <!-- Acknowledgment of Country -->
+        <div class="col-12 text-start small mt-2">
+          We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional
+          Custodians of the lands where we live, learn, and work.
+        </div>
+
+      </div>
+    </section>
+
   </footer>
 
   <!-- Bootstrap JS bundle -->
@@ -102,6 +197,10 @@
 
   <!-- Dark Mode Toggle Script -->
   <script src="resources/js/darkmode.js"></script>
+
+  <!-- This Year Script -->
+<script src="resources/js/thisYear.js"></script>
+
 
 </body>
 
