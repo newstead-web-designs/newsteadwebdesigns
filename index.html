@@ -15,10 +15,9 @@
     integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap" rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Raleway&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -29,11 +28,11 @@
 
 <body>
   <!-- Header with navigation -->
-  <header>
-    <nav id="mainNavbar" class="navbar sticky-top navbar-expand-lg navbar-light py-3 shadow-sm" data-bs-theme="light">
+  <header class="sticky-top">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light py-3 shadow-sm" data-bs-theme="light">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="navbar-brand active me-2" href="index.html">Newstead Web Designs</a>
+        <a class="navbar-brand me-2" href="index.html">Newstead Web Designs</a>
 
         <div id="toggleContainer" class="d-flex align-items-center">
           <!-- Dark Mode Toggle (mobile only) -->
@@ -54,6 +53,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul
             class="navbar-nav d-flex flex-column flex-lg-row align-items-start align-items-lg-center text-lg-end gap-3 ms-2 ms-lg-auto mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -61,7 +61,7 @@
 
             <!-- Get Started Button (desktop only) -->
             <li class="d-none d-lg-block ms-3 mt-0">
-              <a class="btn btn-primary rounded-pill" href="contact.html">Get Started</a>
+              <a class="btn btn-primary" href="contact.html">Get Started</a>
             </li>
 
             <!-- Dark Mode Toggle (desktop only) -->
@@ -75,52 +75,101 @@
 
           <!-- Get Started Button (mobile only) -->
           <div class="d-block d-lg-none ms-0 mt-3">
-            <a class="btn btn-primary rounded-pill" href="contact.html">Get Started</a>
+            <a class="btn btn-primary" href="contact.html">Get Started</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Main content with top padding to avoid sticky navbar overlap -->
+  <!-- Main content -->
   <main id="main">
-    <!-- Page sections go here -->
+
+    <!-- Hero Section -->
+    <section
+      class="container-fluid hero-section d-flex justify-content-center align-items-center text-center min-vh-100 position-relative overflow-hidden">
+      <div class="row w-100 justify-content-center">
+        <div class="col-10">
+          <h1 class="mb-5">Newstead Web Designs</h1>
+          <h2 class="mb-5">Custom, hand-coded websites for Australian small businesses.</h2>
+          <p class="mb-5">Transparent pricing, expert design, ongoing care.</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="services.html" class="btn btn-primary btn-lg" role="button">Services</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg" role="button">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Introduction Section -->
+    <section class="container introduction-section my-5 py-5">
+      <div class="row align-items-center">
+        <!-- Left Column -->
+        <div class="col-12 col-lg-6 px-5" id="leftContent">
+          <h2 class="mb-4">Welcome to Newstead Web Designs</h2>
+          <p class="mb-4">At Newstead Web Designs, we specialise in creating custom, hand-coded websites tailored to the
+            unique needs of small businesses across Australia. Based in Launceston, Tasmania, we are passionate about
+            helping local businesses establish a strong online presence through expert design, transparent pricing, and
+            ongoing care.</p>
+          <p class="mb-4">We design and develop bespoke websites tailored to meet specific business needs, combining
+            creative design with robust functionality. Each website is carefully hand-coded to ensure fast performance,
+            smooth user experience, and strong security. From the initial concept and design through to development,
+            launch, and ongoing maintenance, we provide a full range of services including web hosting and updates to
+            keep your site running smoothly and securely.</p>
+          <p class="mb-4">We believe in building long-term relationships with our clients, offering personalised support
+            and ensuring their websites remain up-to-date and secure. Whether you're looking to create a new website or
+            revamp an existing one, Newstead Web Designs is here to help your business thrive online.</p>
+          <div class="d-flex justify-content-start gap-3">
+            <a href="services.html" class="btn btn-primary" role="button">Explore Our Services</a>
+            <a href="contact.html" class="btn btn-secondary" role="button">Get In Touch</a>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="col-12 col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+          <img src="resources/images/introduction.jpg" class="img-fluid"
+            alt="Office workspace with laptop showing website design">
+        </div>
+      </div>
+
+    </section>
   </main>
 
-<!-- Footer -->
-  <footer  class="container-fluid">
+  <!-- Footer -->
+  <footer class="container-fluid">
 
     <!-- Top Section: Brand, Links, Contact -->
-    <section class="container-fluid py-5 border-bottom border-secondary">
-      <div class="row gy-4">
+    <section class="container-fluid py-5 border-bottom border-secondary footer-top">
+      <div class="row gy-5">
 
-        <!-- Column 1: Brand & CTA --> 
-        <div class="col-12 col-md-4 d-flex flex-column">
+        <!-- Column 1: Brand & CTA -->
+        <div class="col-12 col-lg-4 d-flex flex-column">
           <a href="index.html" class="navbar-brand d-flex align-items-center ms-1 mb-3">Newstead Web Designs</a>
-          <p class="col-8 ms-1 mb-3">We code, host, and maintain websites from Launceston, Tasmania for small businesses Australia-wide.</p>
+          <p class="col-10 ms-1 mb-3">We code, host, and maintain websites from Launceston, Tasmania for small
+            businesses across Australia.</p>
           <div class="mt-2">
-            <a class="btn btn-primary btn-sm rounded-pill mt-auto" href="contact.html" role="button">Get
+            <a class="btn btn-primary btn-sm mt-auto" href="contact.html" role="button">Get
               Started</a>
           </div>
         </div>
 
         <!-- Column 2: Quick Links -->
-        <div class="col-12 col-md-4 d-flex flex-column">
+        <div class="col-12 col-md-6 col-lg-4 d-flex flex-column">
           <nav aria-label="Footer quick links">
             <ul class="nav flex-column ms-1 mb-3 gap-3">
+              <li class="nav-item"><a class="px-0 py-1" href="home.html">Home</a></li>
               <li class="nav-item"><a class="px-0 py-1" href="about.html">About</a></li>
               <li class="nav-item"><a class="px-0 py-1" href="services.html">Services</a></li>
               <li class="nav-item"><a class="px-0 py-1" href="blog.html">Blog</a></li>
               <li class="nav-item"><a class="px-0 py-1" href="contact.html">Contact</a>
               </li>
-              <li class="nav-item"><a class="px-0 py-1" href="#main">Back to Top</a>
+              <li class="nav-item"><a class="px-0 py-1" href="#main"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
               </li>
             </ul>
           </nav>
         </div>
 
         <!-- Column 3: Contact & Social -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <ul class="list-unstyled ms-1 mb-3">
 
             <!-- Email -->
@@ -143,12 +192,12 @@
 
           <!-- Social Links -->
           <div class="d-flex gap-3 ms-1 mt-auto">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
-              aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                class="fa-brands fa-facebook social-icon"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                class="fa-brands fa-instagram social-icon"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin social-icon"></i></a>
           </div>
         </div>
 
@@ -156,30 +205,30 @@
     </section>
 
     <!-- Bottom Section: Legal + Credit + Acknowledgment -->
-    <section class="container-fluid py-3">
-      <div class="row gy-2 gy-md-0 justify-content-between align-items-center">
+    <section class="container-fluid py-3 footer-bottom">
+      <div class="row gy-2 gy-lg-0 justify-content-between align-items-center">
 
         <!-- Copyright -->
-        <div class="col-12 col-md-auto text-start small">
-         &copy; <span id="year"></span> Newstead Web Designs
+        <div class="col-12 col-md-auto text-start">
+          &copy; <span id="year"></span> Newstead Web Designs
         </div>
 
         <!-- Policies -->
-        <div class="col-12 col-md-auto text-start small">
+        <div class="col-12 col-md-auto text-start">
           <a class="me-2" href="policy.html">Privacy Policy</a>
           <a class="mx-2" href="terms.html">Terms & Conditions</a>
         </div>
 
         <!-- Website Credit -->
-        <div class="col-12 text-start small mt-3">
-          Website by <a href="#" target="_blank" rel="noopener noreferrer"
-            class="text-decoration-none">Newstead Web Designs</a>
+        <div class="col-12 text-start mt-3">
+          <p>Website by <a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Newstead Web
+            Designs</a></p>
         </div>
 
         <!-- Acknowledgment of Country -->
-        <div class="col-12 text-start small mt-2">
-          We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional
-          Custodians of the lands where we live, learn, and work.
+        <div class="col-12 text-start mt-3">
+          <p>We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional
+          Custodians of the lands where we live, learn, and work.</p
         </div>
 
       </div>
@@ -199,7 +248,8 @@
   <script src="resources/js/darkmode.js"></script>
 
   <!-- This Year Script -->
-<script src="resources/js/thisYear.js"></script>
+  <script src="resources/js/thisYear.js"></script>
+
 
 
 </body>
