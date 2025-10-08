@@ -8,7 +8,7 @@
   --font-brand: "Bitter", "Georgia", "Times New Roman", serif;
   --font-hero-heading: "Bitter", "Georgia", "Times New Roman", serif;
   --font-hero-subheading: "Raleway", "Verdana", "Arial", sans-serif;
-  --font-hero-paragraph: "Raleway", "Verdana", "Arial", sans-serif;
+  --font-hero-sub-subheading: "Raleway", "Verdana", "Arial", sans-serif;
 
   /* Font Sizes */
   --font-size-body: 16px;
@@ -19,7 +19,7 @@
   --font-size-btn-lg: 1.125rem;
   --font-size-hero-heading: 2.5rem;
   --font-size-hero-subheading: 1.5rem;
-  --font-size-hero-paragraph: 1.125rem;
+  --font-size-hero-sub-subheading: 1.125rem;
   --font-size-footer-top: 1rem;
   --font-size-footer-bottom: 0.875rem;
   --font-size-footer-brand: 1.125rem;
@@ -32,7 +32,7 @@
   --font-weight-btn: bold;
   --font-weight-hero-heading: bold;
   --font-weight-hero-subheading: bold;
-  --font-weight-hero-paragraph: bold;
+  --font-weight-sub-subheading: bold;
   --font-weight-footer-top: normal;
   --font-weight-footer-bottom: light;
   --font-weight-footer-brand: bold;
@@ -72,7 +72,7 @@
   --color-hero-overlay: rgba(255, 253, 245, 0.7); /* #d9e6d2; */
   --color-hero-heading: #254030;
   --color-hero-subheading: #254030;
-  --color-hero-paragraph: #254030;
+  --color-hero-sub-subheading: #254030;
   --color-section-bg: #fffdf5;
   --color-footer: #254030;
   --color-footer-bg: #f2f3eb;
@@ -368,11 +368,11 @@ a:hover {
   font-weight: var(--font-weight-hero-subheading);
 }
 
-.hero-section p {
-  font-family: var(--font-hero-paragraph);
-  color: var(--color-hero-paragraph);
-  font-size: var(--font-size-hero-paragraph);
-  font-weight: var(--font-weight-hero-paragraph);
+.hero-section h3 {
+  font-family: var(--font-hero-sub-subheading);
+  color: var(--color-hero-sub-subheading);
+  font-size: var(--font-size-hero-sub-subheading);
+  font-weight: var(--font-weight-hero-sub-subheading);
 }
 
 /* =======================
