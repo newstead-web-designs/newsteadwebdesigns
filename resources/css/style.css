@@ -4,41 +4,41 @@
 :root {
   /* Fonts */
   --font-body: "Raleway", "Verdana", "Arial", sans-serif;
-  --font-heading: "Raleway", "Verdana", "Arial", sans-serif;
+  --font-heading: "Bitter", "Georgia", "Times New Roman", serif;
+  --font-subheading: "Raleway", "Verdana", "Arial", sans-serif;
   --font-brand: "Bitter", "Georgia", "Times New Roman", serif;
-  --font-hero-heading: "Bitter", "Georgia", "Times New Roman", serif;
-  --font-hero-subheading: "Raleway", "Verdana", "Arial", sans-serif;
-  --font-hero-sub-subheading: "Raleway", "Verdana", "Arial", sans-serif;
 
   /* Font Sizes */
-  --font-size-body: 16px;
-  --font-size-brand: 1.25rem;
+  --font-size-body: 16px; /* Default 16px */
+  --font-size-h1: 2rem; /* Default 2rem */
+  --font-size-h2: 1.5rem; /* Default 1.5rem */
+  --font-size-h3: 1.3rem; /* Default 1.3rem */
+  --font-size-h4: 1rem; /* Default 1rem */
+  --font-size-h5: 0.83rem; /* Default 0.83rem */
+  --font-size-h6: 0.67rem; /* Default 0.67rem */
+  --font-size-brand: 1.3rem;
   --font-size-nav-link: 1rem;
   --font-size-btn: 1rem;
-  --font-size-btn-sm: 0.875rem;
-  --font-size-btn-lg: 1.125rem;
-  --font-size-hero-heading: 2.5rem;
-  --font-size-hero-subheading: 1.5rem;
-  --font-size-hero-sub-subheading: 1.125rem;
+  --font-size-btn-sm: 0.83rem;
+  --font-size-btn-lg: 1.3rem;
   --font-size-footer-top: 1rem;
-  --font-size-footer-bottom: 0.875rem;
-  --font-size-footer-brand: 1.125rem;
-  --font-size-footer-social-icon: 1.125rem;
+  --font-size-footer-bottom: 0.83rem;
+  --font-size-footer-brand: 1.3rem;
+  --font-size-footer-social-icon: 1.3rem;
 
     /* Font Weights */
   --font-weight-body: normal;
+  --font-weight-heading: bold;
+  --font-weight-subheading: bold;
   --font-weight-brand: bold;
   --font-weight-nav-link: bold;
   --font-weight-btn: bold;
-  --font-weight-hero-heading: bold;
-  --font-weight-hero-subheading: bold;
-  --font-weight-sub-subheading: bold;
   --font-weight-footer-top: normal;
   --font-weight-footer-bottom: light;
   --font-weight-footer-brand: bold;
 
   /* Line Heights */
-  --line-height-body: 1.4;
+  --line-height-body: 1.5;
 
   /* Transition */
   --transition-default: 0.3s ease;
@@ -46,6 +46,7 @@
   /* Colors - Light Mode */
   --color-body-text: #1a1a1a;
   --color-heading: #254030;
+  --color-subheading: #254030;
   --color-bg: #ffffff;
   --color-navbar-bg: #f2f3eb;
   --color-brand: #254030;
@@ -73,8 +74,11 @@
   --color-hero-heading: #254030;
   --color-hero-subheading: #254030;
   --color-hero-sub-subheading: #254030;
-  --color-section-bg: #fffdf5;
-  --color-footer: #254030;
+  --color-feature-section-bg: #fffdf5;
+  --color-card-bg: #fffdf5;
+  --color-card-text: #1a1a1a;
+  --color-card-icon: #1a1a1a;
+  --color-card-icon-hover: #2c5e57;
   --color-footer-bg: #f2f3eb;
 }
 
@@ -82,37 +86,38 @@
    Dark Mode Variables
    ======================= */
 body.dark-mode {
-  --color-body-text: #fffdf5;
-  --color-heading: #dbe4dc;
+  --color-body-text: #ffffff;
+  --color-heading: #fffdf5;
+  --color-subheading: #fffdf5;
   --color-bg: #1c241b;
   --color-navbar-bg: #1b2a18;
-  --color-brand: #dbe4dc;
-  --color-brand-hover: #fffdf5;
-  --color-link: #dbe4dc;
-  --color-link-hover: #fffdf5;
-  --color-link-active: #8aa38f;
-  --color-link-active-hover: #a9bdb0;
-  --color-btn-primary-bg: #dbe4dc;
-  --color-btn-primary-border: #dbe4dc;
+  --color-brand: #fffdf5;
+  --color-brand-hover: #dbe4dc;
+  --color-link: #fffdf5;
+  --color-link-hover: #dbe4dc;
+  --color-link-active: #a9bdb0;
+  --color-link-active-hover: #8aa38f;
+  --color-btn-primary-bg: #fffdf5;
+  --color-btn-primary-border: #fffdf5;
   --color-btn-primary-text: #0f1a0e;
-  --color-btn-primary-bg-hover: #fffdf5;
+  --color-btn-primary-bg-hover: #dbe4dc;
   --color-btn-primary-border-hover: #dbe4dc;
   --color-btn-primary-text-hover: #0f1a0e;
   --color-btn-secondary-bg: inherit;
-  --color-btn-secondary-border: #dbe4dc;
-  --color-btn-secondary-text: #dbe4dc;
-  --color-btn-secondary-bg-hover: #dbe4dc;
-  --color-btn-secondary-border-hover: #dbe4dc;
+  --color-btn-secondary-border: #fffdf5;
+  --color-btn-secondary-text: #fffdf5;
+  --color-btn-secondary-bg-hover: #fffdf5;
+  --color-btn-secondary-border-hover: #fffdf5;
   --color-btn-secondary-text-hover: #0f1a0e;
   --color-moon-icon: #fff3a1;
   --color-moon-icon-hover: #fffdf5;
-  --color-focus-shadow: #a9bdb0;
+  --color-focus-shadow: #8aa38f;
   --color-hero-overlay: rgba(27, 42, 24, 0.7); /* #1b2a18; */
-  --color-hero-heading: #fffdf5;
-  --color-hero-subheading: #fffdf5;
-  --color-hero-paragraph: #fffdf5;
-  --color-section-bg: #0f1a0e;
-  --color-footer: #fffdf5;
+  --color-feature-section-bg: #0f1a0e;
+  --color-card-bg: #1b2a18;
+  --color-card-text: #fffdf5;
+  --color-card-icon: #fffdf5;
+  --color-card-icon-hover: #8aa38f;
   --color-footer-bg: #1b2a18;
 }
 
@@ -128,10 +133,37 @@ body {
   transition: background-color var(--transition-default), color var(--transition-default);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-heading);
   color: var(--color-heading);
-  transition: color var(--transition-default);
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-subheading);
+  font-weight: var(--font-weight-subheading);
+  color: var(--color-subheading);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
 }
 
 :focus-visible {
@@ -354,27 +386,6 @@ a:hover {
   z-index: 1; 
 }
 
-.hero-section h1{
-  font-family: var(--font-hero-heading);
-  color: var(--color-hero-heading);
-  font-size: var(--font-size-hero-heading);
-  font-weight: var(--font-weight-hero-heading);
-}
-
-.hero-section h2 {
-  font-family: var(--font-hero-subheading);
-  color: var(--color-hero-subheading);
-  font-size: var(--font-size-hero-subheading);
-  font-weight: var(--font-weight-hero-subheading);
-}
-
-.hero-section h3 {
-  font-family: var(--font-hero-sub-subheading);
-  color: var(--color-hero-sub-subheading);
-  font-size: var(--font-size-hero-sub-subheading);
-  font-weight: var(--font-weight-hero-sub-subheading);
-}
-
 /* =======================
    Introduction Section
    ======================= */
@@ -389,39 +400,38 @@ a:hover {
   margin-right: auto;
 }
 
+/* =======================
+    Cards
+   ======================= */
+.card {
+  background-color: var(--color-card-bg); 
+  color: var(--color-card-text);
+}
+
+.card i {
+  color: var(--color-card-icon);
+  transition: color var(--transition-default);
+}
+
+.card i:hover {
+  color: var(--color-card-icon-hover);
+}
 
 /* =======================
    Footer
    ======================= */
 footer {
   background-color: var(--color-footer-bg);
-  color: var(--color-footer);
 }
-
-footer .navbar-brand {
-  font-size: var(--font-size-footer-brand);
-}
-
-footer a {
-  color: var(--color-link);
-  transition: color var(--transition-default);
-}
-
-footer a:hover {
-  color: var(--color-link-hover);
-}
-
-footer a:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
-}
-
 
 footer .footer-top {
   font-size: var(--font-size-footer-top);
   font-weight: var(--font-weight-footer-top);
 }
 
+footer .social-icon {
+  font-size: var(--font-size-footer-social-icon);
+}
 
 
 footer .footer-bottom {
@@ -429,9 +439,7 @@ footer .footer-bottom {
   font-weight: var(--font-weight-footer-bottom);
 }
 
-footer .social-icon {
-  font-size: var(--font-size-footer-social-icon);
-}
+
 
 /* =======================
    Reduced Motion Support
