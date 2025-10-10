@@ -21,6 +21,7 @@
   --font-size-btn: 1rem;
   --font-size-btn-sm: 0.83rem;
   --font-size-btn-lg: 1.3rem;
+  --font-size-menu-toggle: 1.75rem;
   --font-size-footer-top: 1rem;
   --font-size-footer-bottom: 0.83rem;
   --font-size-footer-brand: 1.3rem;
@@ -34,7 +35,7 @@
   --font-weight-nav-link: bold;
   --font-weight-btn: bold;
   --font-weight-footer-top: normal;
-  --font-weight-footer-bottom: light;
+  --font-weight-footer-bottom: 300;
   --font-weight-footer-brand: bold;
 
   /* Line Heights */
@@ -61,7 +62,7 @@
   --color-btn-primary-bg-hover: #356e46;
   --color-btn-primary-border-hover: #356e46;
   --color-btn-primary-text-hover: #fffdf5;
-  --color-btn-secondary-bg: inherit;
+  --color-btn-secondary-bg: transparent;
   --color-btn-secondary-border: #254030;
   --color-btn-secondary-text: #254030;
   --color-btn-secondary-bg-hover: #254030;
@@ -69,8 +70,9 @@
   --color-btn-secondary-text-hover: #fffdf5;
   --color-moon-icon: #0c3c6e;
   --color-moon-icon-hover: #1c5797;
+  --color-shadow: rgba(0, 0, 0, 0.15);
   --color-focus-shadow: #2c5e57;
-  --color-hero-overlay: rgba(255, 253, 245, 0.7); /* #d9e6d2; */
+  --color-hero-overlay: rgba(255, 253, 245, 0.6); /* #d9e6d2; */
   --color-hero-heading: #254030;
   --color-hero-subheading: #254030;
   --color-hero-sub-subheading: #254030;
@@ -103,7 +105,7 @@ body.dark-mode {
   --color-btn-primary-bg-hover: #dbe4dc;
   --color-btn-primary-border-hover: #dbe4dc;
   --color-btn-primary-text-hover: #0f1a0e;
-  --color-btn-secondary-bg: inherit;
+  --color-btn-secondary-bg: transparent;
   --color-btn-secondary-border: #fffdf5;
   --color-btn-secondary-text: #fffdf5;
   --color-btn-secondary-bg-hover: #fffdf5;
@@ -111,19 +113,25 @@ body.dark-mode {
   --color-btn-secondary-text-hover: #0f1a0e;
   --color-moon-icon: #fff3a1;
   --color-moon-icon-hover: #fffdf5;
+  --color-shadow: rgba(255, 255, 255, 0.15);
   --color-focus-shadow: #8aa38f;
   --color-hero-overlay: rgba(27, 42, 24, 0.7); /* #1b2a18; */
   --color-feature-section-bg: #0f1a0e;
   --color-card-bg: #1b2a18;
   --color-card-text: #fffdf5;
   --color-card-icon: #fffdf5;
-  --color-card-icon-hover: #8aa38f;
+  --color-card-icon-hover: #fff3a1;
+  --color-glow: #fffdf5;
   --color-footer-bg: #1b2a18;
 }
 
 /* =======================
-   Body & Headings
+   Base Styles
    ======================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-body);
@@ -206,7 +214,7 @@ a:hover {
   font-size: var(--font-size-nav-link);
   font-weight: var(--font-weight-nav-link);
   color: var(--color-link);
-  transition: color var(--transition-default), background-color var(--transition-default);
+  transition: all var(--transition-default);
 }
 
 .navbar-nav .nav-link:hover,
@@ -238,6 +246,31 @@ a:hover {
 /* =======================
    Buttons
    ======================= */
+.btn {
+  transition: all var(--transition-default);
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.btn:active {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}
+.btn {
+  font-size: var(--font-size-btn);
+  font-weight: var(--font-weight-btn);
+}
+
+.btn.btn-sm {
+  font-size: var(--font-size-btn-sm);
+}
+
+.btn.btn-lg {
+  font-size: var(--font-size-btn-lg);
+}
+
 .btn.btn-primary {
   background-color: var(--color-btn-primary-bg);
   border: 2px solid var(--color-btn-primary-border);
@@ -280,46 +313,29 @@ a:hover {
   box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
 }
 
-.btn.btn {
-  font-size: var(--font-size-btn);
-  font-weight: var(--font-weight-btn);
-}
-
-.btn.btn-sm {
-  font-size: var(--font-size-btn-sm);
-}
-
-.btn.btn-lg {
-  font-size: var(--font-size-btn-lg);
-}
-
-
 /* =======================
    Menu Toggle Button
    ======================= */
 #menuToggle {
+  border: none;
   box-shadow: none;
-  border-color: var(--color-btn-bg);
-  color: var(--color-btn-bg);
-  padding: 0.5rem 0.75rem;
+  color: var(--color-btn-primary-bg);
   cursor: pointer;
-  transition: transform 0.5s ease;
+  transition: all var(--transition-default);
 }
 
 #menuToggle i {
-  font-size: 1.75rem;
+  font-size: var(--font-size-menu-toggle);
   transition: transform var(--transition-default);
   display: inline-block;
 }
 
 #menuToggle:hover {
-  background-color: var(--color-btn-bg-hover);
-  color: var(--color-btn-text);
+  color: var(--color-btn-primary-bg-hover);
 }
 
 #menuToggle:focus-visible {
-  background-color: var(--color-btn-bg-hover);
-  color: var(--color-btn-text);
+  color: var(--color-btn-primary-border-hover);
   outline: none;
   box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
 }
@@ -375,12 +391,12 @@ a:hover {
   height:100%;
   background: var(--color-hero-overlay);
   z-index: 0;
-  transition: opacity var(--transition-default);
 }
 
 .hero-section > .row,
 .hero-section h1,
 .hero-section h2,
+.hero-section h3,
 .hero-section .btn {
   position: relative;
   z-index: 1; 
@@ -400,21 +416,45 @@ a:hover {
   margin-right: auto;
 }
 
+.introduction-section img {
+  filter: grayscale(0%);
+  transition: filter var(--transition-default);
+}
+
+.introduction-section img:hover {
+  filter: grayscale(50%) brightness(0.95);
+}
+
+
 /* =======================
     Cards
    ======================= */
 .card {
   background-color: var(--color-card-bg); 
   color: var(--color-card-text);
+  transition: all var(--transition-default);
+  will-change: transform;
+}
+
+.card:hover {
+  filter: drop-shadow(0 4px 10px var(--color-shadow));
+  transform: scale(1.02);
 }
 
 .card i {
   color: var(--color-card-icon);
-  transition: color var(--transition-default);
 }
 
 .card i:hover {
   color: var(--color-card-icon-hover);
+}
+
+body.dark-mode .card i {
+  filter: drop-shadow(0 0 4px var(--color-glow)) brightness(1.1);
+}
+
+body.dark-mode .card i:hover {
+  filter: drop-shadow(0 0 6px var(--color-card-icon-hover)) brightness(1.2);
 }
 
 /* =======================
@@ -439,23 +479,30 @@ footer .footer-bottom {
   font-weight: var(--font-weight-footer-bottom);
 }
 
+/* ================================
+   Dark Mode Overrides
+   ================================ */
 
+/* Hero Section - Dark Mode */
+body.dark-mode .hero-section {
+  background-image: url('../images/hero-bg-dark.jpg'); /* Photo by Mareks Steins on Unsplash */
+}
 
-/* =======================
-   Reduced Motion Support
-   ======================= */
+/* ======================================================
+   Accessibility Overrides
+   ====================================================== */
+
+/* Reduce all animations and transitions for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
   }
 }
 
-/* ================================
-   Dark Mode Overrides (Components)
-   ================================ */
-
-/* Hero Section - Dark Mode */
-body.dark-mode .hero-section {
-  background-image: url('../images/hero-bg-dark.jpg'); /* Photo by Mareks Steins on Unsplash */
+/* Remove icon filters in dark mode for users who prefer high contrast */
+@media (prefers-contrast: high) {
+  body.dark-mode .card i {
+    filter: none;
+  }
 }
 
