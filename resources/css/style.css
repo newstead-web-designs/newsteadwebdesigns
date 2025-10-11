@@ -91,19 +91,19 @@ body.dark-mode {
   --color-body-text: #ffffff;
   --color-heading: #fffdf5;
   --color-subheading: #fffdf5;
-  --color-bg: #1c241b;
-  --color-navbar-bg: #1b2a18;
+  --color-bg: #000000;
+  --color-navbar-bg: #0f1a0e;
   --color-brand: #fffdf5;
-  --color-brand-hover: #dbe4dc;
+  --color-brand-hover: #d4e6d4;
   --color-link: #fffdf5;
-  --color-link-hover: #dbe4dc;
-  --color-link-active: #a9bdb0;
-  --color-link-active-hover: #8aa38f;
+  --color-link-hover: #d4e6d4;
+  --color-link-active: #E6F1E6;
+  --color-link-active-hover: #B9D4AA;
   --color-btn-primary-bg: #fffdf5;
   --color-btn-primary-border: #fffdf5;
   --color-btn-primary-text: #0f1a0e;
-  --color-btn-primary-bg-hover: #dbe4dc;
-  --color-btn-primary-border-hover: #dbe4dc;
+  --color-btn-primary-bg-hover: #d4e6d4;
+  --color-btn-primary-border-hover: #d4e6d4;
   --color-btn-primary-text-hover: #0f1a0e;
   --color-btn-secondary-bg: transparent;
   --color-btn-secondary-border: #fffdf5;
@@ -114,15 +114,16 @@ body.dark-mode {
   --color-moon-icon: #fff3a1;
   --color-moon-icon-hover: #fffdf5;
   --color-shadow: rgba(255, 255, 255, 0.15);
-  --color-focus-shadow: #8aa38f;
-  --color-hero-overlay: rgba(27, 42, 24, 0.7); /* #1b2a18; */
+  --color-focus-shadow: #B9D4AA;
+  --color-hero-overlay: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
   --color-feature-section-bg: #0f1a0e;
-  --color-card-bg: #1b2a18;
+  --color-card-bg: #0f1a0e;
   --color-card-text: #fffdf5;
   --color-card-icon: #fffdf5;
   --color-card-icon-hover: #fff3a1;
   --color-glow: #fffdf5;
-  --color-footer-bg: #1b2a18;
+  --color-glow-hover: #fff3a1;
+  --color-footer-bg: #0f1a0e;
 }
 
 /* =======================
@@ -189,6 +190,12 @@ a:hover {
   color: var(--color-link-hover);
 }
 
+a:focus-visible {
+  color: var(--color-link-hover);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
 /* =======================
    Navbar
    ======================= */
@@ -209,6 +216,21 @@ a:hover {
   color: var(--color-brand-hover);
 }
 
+.navbar-brand:focus {
+  color: var(--color-brand-hover);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+}
+
+body.dark-mode .navbar-brand {
+  filter: drop-shadow(0 0 4px var(--color-glow)) brightness(1.1);
+}
+
+body.dark-mode .navbar-brand:hover,
+body.dark-mode .navbar-brand:focus-visible {
+  filter: drop-shadow(0 0 6px var(--color-glow-hover)) brightness(1.2);
+}
+
 .navbar-nav .nav-link,
 .navbar-nav .btn {
   font-size: var(--font-size-nav-link);
@@ -222,13 +244,13 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-.nav-link:focus-visible {
+.navbar-nav .nav-link:focus-visible,
+.navbar-nav .btn:focus-visible {
   color: var(--color-link-hover);
   outline: none;
   box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
 }
 
-.navbar-brand.active,
 .navbar-nav .nav-link.active {
   color: var(--color-link-active);
 }
@@ -250,7 +272,8 @@ a:hover {
   transition: all var(--transition-default);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
   transform: scale(1.02);
 }
 
@@ -258,6 +281,7 @@ a:hover {
   filter: brightness(0.9);
   transform: scale(0.98);
 }
+
 .btn {
   font-size: var(--font-size-btn);
   font-weight: var(--font-weight-btn);
