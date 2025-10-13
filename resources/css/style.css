@@ -5,8 +5,6 @@
   /* Fonts */
   --font-body: "Raleway", "Verdana", "Arial", sans-serif;
   --font-heading: "Bitter", "Georgia", "Times New Roman", serif;
-  --font-subheading: "Raleway", "Verdana", "Arial", sans-serif;
-  --font-brand: "Bitter", "Georgia", "Times New Roman", serif;
 
   /* Font Sizes */
   --font-size-body: 16px; /* Default 16px */
@@ -16,114 +14,48 @@
   --font-size-h4: 1rem; /* Default 1rem */
   --font-size-h5: 0.83rem; /* Default 0.83rem */
   --font-size-h6: 0.67rem; /* Default 0.67rem */
-  --font-size-brand: 1.3rem;
-  --font-size-nav-link: 1rem;
-  --font-size-btn: 1rem;
-  --font-size-btn-sm: 0.83rem;
-  --font-size-btn-lg: 1.3rem;
   --font-size-menu-toggle: 1.75rem;
-  --font-size-footer-top: 1rem;
-  --font-size-footer-bottom: 0.83rem;
-  --font-size-footer-brand: 1.3rem;
-  --font-size-footer-social-icon: 1.3rem;
 
     /* Font Weights */
   --font-weight-body: normal;
   --font-weight-heading: bold;
-  --font-weight-subheading: bold;
-  --font-weight-brand: bold;
   --font-weight-nav-link: bold;
   --font-weight-btn: bold;
-  --font-weight-footer-top: normal;
-  --font-weight-footer-bottom: 300;
-  --font-weight-footer-brand: bold;
+  --font-weight-light: 300;
+
 
   /* Line Heights */
-  --line-height-body: 1.5;
+  --line-height-default: 1.5;
 
   /* Transition */
   --transition-default: 0.3s ease;
 
   /* Colors - Light Mode */
-  --color-body-text: #1a1a1a;
-  --color-heading: #254030;
-  --color-subheading: #254030;
-  --color-bg: #ffffff;
-  --color-navbar-bg: #f2f3eb;
-  --color-brand: #254030;
-  --color-brand-hover: #356e46;
-  --color-link: #254030;
-  --color-link-hover: #356e46;
-  --color-link-active: #1f4a44;
-  --color-link-active-hover: #2c5e57;
-  --color-btn-primary-bg: #254030;
-  --color-btn-primary-border: #254030;
-  --color-btn-primary-text: #fffdf5;
-  --color-btn-primary-bg-hover: #356e46;
-  --color-btn-primary-border-hover: #356e46;
-  --color-btn-primary-text-hover: #fffdf5;
-  --color-btn-secondary-bg: transparent;
-  --color-btn-secondary-border: #254030;
-  --color-btn-secondary-text: #254030;
-  --color-btn-secondary-bg-hover: #254030;
-  --color-btn-secondary-border-hover: #254030;
-  --color-btn-secondary-text-hover: #fffdf5;
-  --color-moon-icon: #0c3c6e;
-  --color-moon-icon-hover: #1c5797;
-  --color-shadow: rgba(0, 0, 0, 0.15);
-  --color-focus-shadow: #2c5e57;
-  --color-hero-overlay: rgba(255, 253, 245, 0.6); /* #d9e6d2; */
-  --color-hero-heading: #254030;
-  --color-hero-subheading: #254030;
-  --color-hero-sub-subheading: #254030;
-  --color-feature-section-bg: #fffdf5;
-  --color-card-bg: #fffdf5;
-  --color-card-text: #1a1a1a;
-  --color-card-icon: #1a1a1a;
-  --color-card-icon-hover: #2c5e57;
-  --color-footer-bg: #f2f3eb;
-}
+--color-text: #1a1a1a;
+--color-bg-primary: #ffffff;
+--color-bg-secondary: #f2f3eb;
+--color-bg-tertiary: #fffdf5;
+ --color-overlay: rgba(255, 253, 245, 0.6); /* #fffdf5; */
+--color-brand-primary: #254030;
+--color-brand-secondary: #356e46;
+--color-accent-primary: #0c3c6e;
+--color-accent-secondary: #1c5797;
+--color-shadow: rgba(0, 0, 0, 0.15);
 
 /* =======================
    Dark Mode Variables
    ======================= */
 body.dark-mode {
-  --color-body-text: #ffffff;
-  --color-heading: #fffdf5;
-  --color-subheading: #fffdf5;
-  --color-bg: #000000;
-  --color-navbar-bg: #0f1a0e;
-  --color-brand: #fffdf5;
-  --color-brand-hover: #d4e6d4;
-  --color-link: #fffdf5;
-  --color-link-hover: #d4e6d4;
-  --color-link-active: #E6F1E6;
-  --color-link-active-hover: #B9D4AA;
-  --color-btn-primary-bg: #fffdf5;
-  --color-btn-primary-border: #fffdf5;
-  --color-btn-primary-text: #0f1a0e;
-  --color-btn-primary-bg-hover: #d4e6d4;
-  --color-btn-primary-border-hover: #d4e6d4;
-  --color-btn-primary-text-hover: #0f1a0e;
-  --color-btn-secondary-bg: transparent;
-  --color-btn-secondary-border: #fffdf5;
-  --color-btn-secondary-text: #fffdf5;
-  --color-btn-secondary-bg-hover: #fffdf5;
-  --color-btn-secondary-border-hover: #fffdf5;
-  --color-btn-secondary-text-hover: #0f1a0e;
-  --color-moon-icon: #fff3a1;
-  --color-moon-icon-hover: #fffdf5;
+  --color-text: #ffffff;
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0f1a0e;
+  --color-bg-tertiary: #0f1a0e;
+  --color-overlay: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
+  --color-brand-primary: #fffdf5;
+  --color-brand-secondary: #d4e6d4;
+  --color-accent-primary: #fffdf5;
+  --color-accent-secondary: #fff3a1;
   --color-shadow: rgba(255, 255, 255, 0.15);
-  --color-focus-shadow: #B9D4AA;
-  --color-hero-overlay: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
-  --color-feature-section-bg: #0f1a0e;
-  --color-card-bg: #0f1a0e;
-  --color-card-text: #fffdf5;
-  --color-card-icon: #fffdf5;
-  --color-card-icon-hover: #fff3a1;
-  --color-glow: #fffdf5;
-  --color-glow-hover: #fff3a1;
-  --color-footer-bg: #0f1a0e;
 }
 
 /* =======================
@@ -136,23 +68,24 @@ html {
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
-  color: var(--color-body-text);
-  background-color: var(--color-bg);
-  transition: background-color var(--transition-default), color var(--transition-default);
+  line-height: var(--line-height-default);
+  color: var(--color-text);
+  background-color: var(--color-bg-primary);
+  transition: all var(--transition-default);
+}
+
+h1, h2, h3, h4, h5, h6  {
+  font-weight: var(--font-weight-heading);
+  color: var(--color-brand-primary);
 }
 
 h1 {
   font-family: var(--font-heading);
   font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-heading);
-  color: var(--color-heading);
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: var(--font-subheading);
-  font-weight: var(--font-weight-subheading);
-  color: var(--color-subheading);
+  font-family: var(--font-heading);
 }
 
 h2 {
@@ -177,102 +110,104 @@ h6 {
 
 :focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
 }
 
 a {
   text-decoration: none;
-  color: var(--color-link);
+  color: var(--color-brand-primary);
   transition: color var(--transition-default);
 }
 
-a:hover {
-  color: var(--color-link-hover);
+a:hover,
+a:focus,
+a:focus-visible,
+a:active {
+  color: var(--color-brand-secondary);
 }
 
 a:focus-visible {
-  color: var(--color-link-hover);
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
 }
 
 /* =======================
    Navbar
    ======================= */
 .navbar {
-  background-color: var(--color-navbar-bg);
+  background-color: var(--color-bg-secondary);
   transition: background-color var(--transition-default);
 }
 
 .navbar-brand {
-  font-family: var(--font-brand);
-  font-weight: var(--font-weight-brand);
-  font-size: var(--font-size-brand);
-  color: var(--color-brand);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--font-size-h3);
+  color: var(--color-brand-primary);
   transition: color var(--transition-default);
 }
 
-.navbar-brand:hover {
-  color: var(--color-brand-hover);
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:focus-visible,
+.navbar-brand:active {
+  color: var(--color-brand-secondary);
 }
 
-.navbar-brand:focus {
-  color: var(--color-brand-hover);
+.navbar-brand:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
 }
 
 body.dark-mode .navbar-brand {
-  filter: drop-shadow(0 0 4px var(--color-glow)) brightness(1.1);
+  color: var(--color-accent-primary);
+  filter: drop-shadow(0 0 4px var(--color-accent-primary)) brightness(1.1);
 }
 
 body.dark-mode .navbar-brand:hover,
-body.dark-mode .navbar-brand:focus-visible {
-  filter: drop-shadow(0 0 6px var(--color-glow-hover)) brightness(1.2);
+body.dark-mode .navbar-brand:focus,
+body.dark-mode .navbar-brand:focus-visible,
+body.dark-mode .navbar-brand:active {
+  color: var(--color-accent-secondary);
+  filter: drop-shadow(0 0 6px var(--color-accent-secondary)) brightness(1.2);
 }
 
-.navbar-nav .nav-link,
-.navbar-nav .btn {
-  font-size: var(--font-size-nav-link);
-  font-weight: var(--font-weight-nav-link);
-  color: var(--color-link);
+body.dark-mode .navbar-brand:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--color-accent-secondary);
+}
+
+.navbar-nav .nav-link {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-brand-primary);
   transition: all var(--transition-default);
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .btn:hover {
-  color: var(--color-link-hover);
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:focus-visible, 
+.navbar-nav .nav-link:active {
+  color: var(--color-brand-secondary);
 }
 
-.navbar-nav .nav-link:focus-visible,
-.navbar-nav .btn:focus-visible {
-  color: var(--color-link-hover);
+.navbar-nav .nav-link:focus-visible {
+  color: var(--color-brand-secondary);
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
-}
-
-.navbar-nav .nav-link.active {
-  color: var(--color-link-active);
-}
-
-.navbar-nav .nav-link.active:hover {
-  color: var(--color-link-active-hover);
-}
-
-.navbar-nav .nav-link.active:focus-visible {
-  color: var(--color-link-active-hover);
-  outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
 }
 
 /* =======================
    Buttons
    ======================= */
 .btn {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-heading);
   transition: all var(--transition-default);
 }
 
 .btn:hover,
+.btn:focus,
 .btn:focus-visible {
   transform: scale(1.02);
 }
@@ -282,59 +217,52 @@ body.dark-mode .navbar-brand:focus-visible {
   transform: scale(0.98);
 }
 
-.btn {
-  font-size: var(--font-size-btn);
-  font-weight: var(--font-weight-btn);
-}
-
 .btn.btn-sm {
-  font-size: var(--font-size-btn-sm);
+  font-size: var(--font-size-h5);
 }
 
 .btn.btn-lg {
-  font-size: var(--font-size-btn-lg);
+  font-size: var(--font-size-h3);
 }
 
 .btn.btn-primary {
-  background-color: var(--color-btn-primary-bg);
-  border: 2px solid var(--color-btn-primary-border);
-  color: var(--color-btn-primary-text);
-  transition: background-color var(--transition-default), border-color var(--transition-default), color var(--transition-default);
+  background-color: var(--color-brand-primary);
+  border: 2px solid var(--color-brand-primary);
+  color: var(--color-bg-primary);
 }
 
-.btn.btn-primary:hover {
-  background-color: var(--color-btn-primary-bg-hover);
-  border: 2px solid var(--color-btn-primary-border-hover);
-  color: var(--color-btn-primary-text-hover);
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:focus-visible,
+.btn.btn-primary:active {
+  background-color: var(--color-brand-secondary);
+  border: 2px solid var(--color-brand-secondary);
+  color: var(--color-bg-primary);
 }
 
 .btn.btn-primary:focus-visible {
-  background-color: var(--color-btn-primary-bg-hover);
-  border: 2px solid var(--color-btn-primary-border-hover);
-  color: var(--color-btn-primary-text-hover);
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
 }
 
 .btn.btn-secondary {
-  background-color: var(--color-btn-secondary-bg);
-  border: 2px solid var(--color-btn-secondary-border);
-  color: var(--color-btn-secondary-text);
-  transition: background-color var(--transition-default), border-color var(--transition-default), color var(--transition-default);
+  background-color: transparent;
+  border: 2px solid var(--color-brand-primary);
+  color: var(--color-brand-primary);
 }
 
-.btn.btn-secondary:hover {
-  background-color: var(--color-btn-secondary-bg-hover);
-  border: 2px solid var(--color-btn-secondary-border-hover);
-  color: var(--color-btn-secondary-text-hover);
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus,
+.btn.btn-secondary:focus-visible,
+.btn.btn-secondary:active {
+  background-color: var(--color-brand-primary);
+  border: 2px solid var(--color-brand-primary);
+  color: var(--color-bg-primary);
 }
 
 .btn.btn-secondary:focus-visible {
-  background-color: var(--color-btn-secondary-bg-hover);
-  border: 2px solid var(--color-btn-secondary-bg-hover);
-  color: var(--color-btn-secondary-text-hover);
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
 }
 
 /* =======================
@@ -343,7 +271,7 @@ body.dark-mode .navbar-brand:focus-visible {
 #menuToggle {
   border: none;
   box-shadow: none;
-  color: var(--color-btn-primary-bg);
+  color: var(--color-brand-primary);
   cursor: pointer;
   transition: all var(--transition-default);
 }
@@ -354,14 +282,16 @@ body.dark-mode .navbar-brand:focus-visible {
   display: inline-block;
 }
 
-#menuToggle:hover {
-  color: var(--color-btn-primary-bg-hover);
+#menuToggle:hover,
+#menuToggle:focus,
+#menuToggle:focus-visible,
+#menuToggle:active {
+  color: var(--color-brand-secondary);
 }
 
 #menuToggle:focus-visible {
-  color: var(--color-btn-primary-border-hover);
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-bg-secondary);
 }
 
 #toggleContainer {
@@ -373,21 +303,25 @@ body.dark-mode .navbar-brand:focus-visible {
    ======================= */
 #darkModeToggleMobile i,
 #darkModeToggleDesktop i {
-  color: var(--color-moon-icon);
-  transition: color var(--transition-default);
+  color: var(--color-accent-primary);
+  transition: all var(--transition-default);
 }
 
 #darkModeToggleMobile:hover i,
 #darkModeToggleDesktop:hover i,
+#darkModeToggleMobile:focus i,
+#darkModeToggleDesktop:focus i,
 #darkModeToggleMobile:focus-visible i,
-#darkModeToggleDesktop:focus-visible i {
-  color: var(--color-moon-icon-hover);
+#darkModeToggleDesktop:focus-visible i,
+#darkModeToggleMobile:active i,
+#darkModeToggleDesktop:active i {
+  color: var(--color-accent-secondary);
 }
 
 #darkModeToggleMobile:focus-visible,
 #darkModeToggleDesktop:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-focus-shadow);
+  box-shadow: 0 0 0 0.25rem var(--color-accent-secondary);
 }
 
 /* ==============================
@@ -413,7 +347,7 @@ body.dark-mode .navbar-brand:focus-visible {
   left:0; 
   width:100%; 
   height:100%;
-  background: var(--color-hero-overlay);
+  background: var(--color-overlay);
   z-index: 0;
 }
 
@@ -454,8 +388,8 @@ body.dark-mode .navbar-brand:focus-visible {
     Cards
    ======================= */
 .card {
-  background-color: var(--color-card-bg); 
-  color: var(--color-card-text);
+  background-color: var(--color-bg-tertiary); 
+  color: var(--color-text);
   transition: all var(--transition-default);
   will-change: transform;
 }
@@ -466,41 +400,39 @@ body.dark-mode .navbar-brand:focus-visible {
 }
 
 .card i {
-  color: var(--color-card-icon);
+  color: var(--color-accent-primary);
 }
 
 .card i:hover {
-  color: var(--color-card-icon-hover);
+  color: var(--color-accent-secondary);
 }
 
 body.dark-mode .card i {
-  filter: drop-shadow(0 0 4px var(--color-glow)) brightness(1.1);
+  filter: drop-shadow(0 0 4px var(--color-accent-primary)) brightness(1.1);
 }
 
 body.dark-mode .card i:hover {
-  filter: drop-shadow(0 0 6px var(--color-card-icon-hover)) brightness(1.2);
+  filter: drop-shadow(0 0 6px var(--color-accent-secondary)) brightness(1.2);
 }
 
 /* =======================
    Footer
    ======================= */
 footer {
-  background-color: var(--color-footer-bg);
+  background-color: var(--color-bg-secondary);
 }
 
 footer .footer-top {
-  font-size: var(--font-size-footer-top);
-  font-weight: var(--font-weight-footer-top);
+  font-size: var(--font-size-h4);
 }
 
 footer .social-icon {
-  font-size: var(--font-size-footer-social-icon);
+  font-size: var(--font-size-h3);
 }
 
-
 footer .footer-bottom {
-  font-size: var(--font-size-footer-bottom);
-  font-weight: var(--font-weight-footer-bottom);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-light);
 }
 
 /* ================================
