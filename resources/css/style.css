@@ -23,7 +23,6 @@
   --font-weight-btn: bold;
   --font-weight-light: 300;
 
-
   /* Line Heights */
   --line-height-default: 1.5;
 
@@ -35,7 +34,8 @@
 --color-bg-primary: #ffffff;
 --color-bg-secondary: #f2f3eb;
 --color-bg-tertiary: #fffdf5;
- --color-overlay: rgba(255, 253, 245, 0.6); /* #fffdf5; */
+--color-overlay-primary: rgba(255, 253, 245, 0.6); /* #fffdf5; */
+--color-overlay-secondary: rgba(255, 255, 255, 0.6); /* #ffffff; */
 --color-brand-primary: #254030;
 --color-brand-secondary: #356e46;
 --color-accent-primary: #0c3c6e;
@@ -50,7 +50,8 @@ body.dark-mode {
   --color-bg-primary: #000000;
   --color-bg-secondary: #0f1a0e;
   --color-bg-tertiary: #0f1a0e;
-  --color-overlay: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
+  --color-overlay-primary: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
+  --color-overlay-secondary: rgba(0, 0, 0, 0.6); /* #000000; */
   --color-brand-primary: #fffdf5;
   --color-brand-secondary: #d4e6d4;
   --color-accent-primary: #fffdf5;
@@ -347,7 +348,7 @@ body.dark-mode .navbar-brand:focus-visible {
   left:0; 
   width:100%; 
   height:100%;
-  background: var(--color-overlay);
+  background: var(--color-overlay-primary);
   z-index: 0;
 }
 
@@ -414,6 +415,66 @@ body.dark-mode .card i {
 body.dark-mode .card i:hover {
   filter: drop-shadow(0 0 6px var(--color-accent-secondary)) brightness(1.2);
 }
+
+/* =======================
+   Carousel
+   ======================= */
+
+.carousel-item {
+  height: 40vh; /* default mobile */
+}
+
+@media (min-width: 576px) { /* tablets */
+  .carousel-item {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 992px) { /* laptops */
+  .carousel-item {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1200px) { /* desktops */
+  .carousel-item {
+    height: 70vh;
+  }
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+   object-position: center;
+}
+
+.carousel-caption-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: var(--color-overlay-secondary);
+  text-align: center;
+  transition: opacity var(--transition-default);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item:hover .carousel-caption-full,
+.carousel-item:focus .carousel-caption-full,
+.carousel-item:focus-visible .carousel-caption-full,
+.carousel-item:active .carousel-caption-full {
+  opacity: 1;
+}
+
+.carousel-caption-full h3 {
+  margin: 0;
+}
+
 
 /* =======================
    Footer
