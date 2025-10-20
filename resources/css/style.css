@@ -54,7 +54,7 @@ body.dark-mode {
   --color-overlay-secondary: rgba(0, 0, 0, 0.6); /* #000000; */
   --color-brand-primary: #fffdf5;
   --color-brand-secondary: #d4e6d4;
-  --color-accent-primary: #fffdf5;
+  --color-accent-primary: #fffbe0;
   --color-accent-secondary: #fff3a1;
   --color-shadow: rgba(255, 255, 255, 0.15);
 }
@@ -161,21 +161,21 @@ a:focus-visible {
 }
 
 body.dark-mode .navbar-brand {
-  color: var(--color-accent-primary);
-  filter: drop-shadow(0 0 4px var(--color-accent-primary)) brightness(1.1);
+  color: var(--color-brand-primary);
+  filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
 }
 
 body.dark-mode .navbar-brand:hover,
 body.dark-mode .navbar-brand:focus,
 body.dark-mode .navbar-brand:focus-visible,
 body.dark-mode .navbar-brand:active {
-  color: var(--color-accent-secondary);
-  filter: drop-shadow(0 0 6px var(--color-accent-secondary)) brightness(1.2);
+  color: var(--color-accent-primary);
+  filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
 }
 
 body.dark-mode .navbar-brand:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0.25rem var(--color-accent-secondary);
+  box-shadow: 0 0 0 0.25rem var(--color-accent-primary);
 }
 
 .navbar-nav .nav-link {
@@ -406,19 +406,21 @@ body.dark-mode .navbar-brand:focus-visible {
 }
 
 .card i {
-  color: var(--color-accent-primary);
+  color: var(--color-brand-primary);
 }
 
 .card i:hover {
-  color: var(--color-accent-secondary);
+  color: var(--color-brand-secondary);
 }
 
 body.dark-mode .card i {
-  filter: drop-shadow(0 0 4px var(--color-accent-primary)) brightness(1.1);
+  color: var(--color-brand-primary);
+  filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
 }
 
 body.dark-mode .card i:hover {
-  filter: drop-shadow(0 0 6px var(--color-accent-secondary)) brightness(1.2);
+  color: var(--color-accent-primary);
+  filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
 }
 
 /* =======================
