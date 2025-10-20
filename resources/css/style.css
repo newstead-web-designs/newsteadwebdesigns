@@ -361,6 +361,11 @@ body.dark-mode .navbar-brand:focus-visible {
   z-index: 1; 
 }
 
+.hero-section h2,
+.hero-section h3 {
+  font-family: var(--font-body);
+}
+
 /* =======================
    Introduction Section
    ======================= */
