@@ -423,6 +423,12 @@ body.dark-mode .card i:hover {
   filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
 }
 
+.testimonials-section .card i:hover {
+  color: inherit;
+  filter: none;
+}
+
+
 /* =======================
    Carousel
    ======================= */
