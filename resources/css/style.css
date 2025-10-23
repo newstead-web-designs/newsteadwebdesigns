@@ -34,7 +34,7 @@
 --color-bg-primary: #ffffff;
 --color-bg-secondary: #f2f3eb;
 --color-bg-tertiary: #fffdf5;
---color-overlay-primary: rgba(255, 253, 245, 0.6); /* #fffdf5; */
+--color-overlay-primary: rgba(242, 243, 235, 0.6); /* #f2f3eb; */
 --color-overlay-secondary: rgba(255, 255, 255, 0.6); /* #ffffff; */
 --color-brand-primary: #254030;
 --color-brand-secondary: #356e46;
@@ -160,20 +160,20 @@ a:focus-visible {
   box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
 }
 
-body.dark-mode .navbar-brand {
+body.dark-mode header .navbar-brand {
   color: var(--color-brand-primary);
   filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
 }
 
-body.dark-mode .navbar-brand:hover,
-body.dark-mode .navbar-brand:focus,
-body.dark-mode .navbar-brand:focus-visible,
-body.dark-mode .navbar-brand:active {
+body.dark-mode header .navbar-brand:hover,
+body.dark-mode header .navbar-brand:focus,
+body.dark-mode header .navbar-brand:focus-visible,
+body.dark-mode header .navbar-brand:active {
   color: var(--color-accent-primary);
   filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
 }
 
-body.dark-mode .navbar-brand:focus-visible {
+body.dark-mode header .navbar-brand:focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.25rem var(--color-accent-primary);
 }
@@ -367,10 +367,10 @@ body.dark-mode .navbar-brand:focus-visible {
 }
 
 /* =======================
-   Introduction Section
+  Content
    ======================= */
 
-.introduction-section img {
+.content img {
   max-height: 600px;
   width: auto;
   height: auto;
@@ -380,12 +380,12 @@ body.dark-mode .navbar-brand:focus-visible {
   margin-right: auto;
 }
 
-.introduction-section img {
+.content img {
   filter: grayscale(0%);
   transition: filter var(--transition-default);
 }
 
-.introduction-section img:hover {
+.content img:hover {
   filter: grayscale(50%) brightness(0.95);
 }
 
@@ -428,24 +428,24 @@ body.dark-mode .card i:hover {
    ======================= */
 
 .carousel-item {
-  height: 40vh; /* default mobile */
+  height: 50vh; /* default mobile */
 }
 
 @media (min-width: 576px) { /* tablets */
-  .carousel-item {
-    height: 50vh;
-  }
-}
-
-@media (min-width: 992px) { /* laptops */
   .carousel-item {
     height: 60vh;
   }
 }
 
-@media (min-width: 1200px) { /* desktops */
+@media (min-width: 992px) { /* laptops  */
   .carousel-item {
     height: 70vh;
+  }
+}
+
+@media (min-width: 1200px) { /* desktops */
+  .carousel-item {
+    height: 80vh;
   }
 }
 
@@ -482,6 +482,36 @@ body.dark-mode .card i:hover {
   margin: 0;
 }
 
+/* =======================
+   Summary
+   ======================= */
+
+.summary {
+  position: relative;
+  background-image: url('../images/summary-bg.jpg'); /* Photo by Artem Sapegin on Unsplash */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.summary::before {
+  content: '';
+  position: absolute;
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%;
+  background: var(--color-overlay-primary);
+  z-index: 0;
+}
+
+.summary > .row,
+.summary h2,
+.summary p,
+.summary .btn {
+  position: relative;
+  z-index: 1; 
+}
 
 /* =======================
    Footer
@@ -510,6 +540,11 @@ footer .footer-bottom {
 /* Hero Section - Dark Mode */
 body.dark-mode .hero-section {
   background-image: url('../images/hero-bg-dark.jpg'); /* Photo by Mareks Steins on Unsplash */
+}
+
+/* Hero Section - Dark Mode */
+body.dark-mode .summary {
+  background-image: url('../images/summary-bg-dark.jpg'); /* Photo by Bernd 📷 Dittrich on Unsplash */
 }
 
 /* ======================================================
