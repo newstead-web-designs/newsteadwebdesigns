@@ -24,7 +24,8 @@
   --font-weight-light: 300;
 
   /* Line Heights */
-  --line-height-default: 1.5;
+  --line-height-default: 1.6;
+  --line-height-list: 1.8;
 
   /* Transition */
   --transition-default: 0.3s ease;
@@ -109,6 +110,10 @@ h6 {
   font-size: var(--font-size-h6);
 }
 
+ol, ul {
+  line-height: var(--line-height-list);
+}
+
 :focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
@@ -131,6 +136,7 @@ a:focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
 }
+
 
 /* =======================
    Navbar
@@ -388,6 +394,9 @@ body.dark-mode header .navbar-brand:focus-visible {
 .content img:hover {
   filter: grayscale(50%) brightness(0.95);
 }
+#portrait {
+  width: 150px;    
+}
 
 
 /* =======================
@@ -552,6 +561,7 @@ body.dark-mode .hero-section {
 body.dark-mode .summary {
   background-image: url('../images/summary-bg-dark.jpg'); /* Photo by Bernd 📷 Dittrich on Unsplash */
 }
+
 
 /* ======================================================
    Accessibility Overrides
