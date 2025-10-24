@@ -51,9 +51,9 @@ body.dark-mode {
   --color-bg-primary: #000000;
   --color-bg-secondary: #0f1a0e;
   --color-bg-tertiary: #0f1a0e;
-  --color-overlay-primary: rgba(15, 26, 14, 0.8); /* #0f1a0e; */
+  --color-overlay-primary: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
   --color-overlay-secondary: rgba(0, 0, 0, 0.6); /* #000000; */
-  --color-brand-primary: #ffffff;
+  --color-brand-primary: #fffdf5;
   --color-brand-secondary: #d4e6d4;
   --color-accent-primary: #fffbe0;
   --color-accent-secondary: #fff3a1;
@@ -253,7 +253,7 @@ body.dark-mode header .navbar-brand:focus-visible {
 }
 
 .btn.btn-secondary {
-  background-color: var(--color-brand-primary);
+  background-color: transparent;
   border: 2px solid var(--color-brand-primary);
   color: var(--color-brand-primary);
 }
@@ -428,8 +428,8 @@ body.dark-mode .card i {
 }
 
 body.dark-mode .card i:hover {
-  color: var(--color-brand-primary);
-  filter: drop-shadow(0 0 6px var(--color-brand-primary)) brightness(1.2);
+  color: var(--color-accent-primary);
+  filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
 }
 
 .testimonials-section .card i:hover {
