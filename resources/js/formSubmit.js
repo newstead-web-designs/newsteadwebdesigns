@@ -1,26 +1,39 @@
-// Get form and thank-you message elements
-const form = document.getElementById('contactForm');
-const thankYou = document.getElementById('thankYouMessage');
+// Form submission JS: handles showing thank-you message after form submission
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const thankYouMessage = document.getElementById("thankYouMessage");
 
-if (form) {
-  form.addEventListener('submit', function(event) {
-    // Only proceed if the form is valid
-    if (form.checkValidity()) {
-      event.preventDefault(); // prevent default submission
+  if (!form) return;
 
-      // Submit form data to Netlify
-      const formData = new FormData(form);
-      fetch("/", {
-        method: "POST",
-        body: formData
-      })
-        .then(() => {
-          form.style.display = 'none';        // Hide form
-          thankYou.style.display = 'block';   // Show thank-you message
-        })
-        .catch((error) => alert("Error submitting form: " + error));
-    } else {
-      form.classList.add('was-validated'); // Show validation errors
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Check HTML5 validation first
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return;
     }
+
+    // Prepare form data for Netlify
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(function () {
+        // Hide form and show thank-you message
+        form.style.display = "none";
+        thankYouMessage.style.display = "block";
+
+        // Optionally, reset form fields
+        form.reset();
+        form.classList.remove("was-validated");
+      })
+      .catch(function (error) {
+        console.error("Form submission error:", error);
+        alert("Oops! Something went wrong. Please try again later.");
+      });
   });
-}
+});
