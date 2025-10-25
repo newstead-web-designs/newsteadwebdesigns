@@ -133,9 +133,10 @@
           <h2 class="mb-4">Send Us a Message</h2>
           <p class="mb-3">Fill out the form below, and we'll get back to you as soon as we can.</p>
 
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you"
-            class="needs-validation p-4 rounded shadow-sm" novalidate>
-            <!-- Hidden input for Netlify -->
+          <!-- Contact Form -->
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            class="needs-validation p-4 rounded shadow-sm bg-white" novalidate>
+            <!-- Netlify hidden input -->
             <input type="hidden" name="form-name" value="contact">
 
             <!-- Honeypot field for spam protection -->
@@ -151,14 +152,15 @@
 
             <div class="mb-3">
               <label for="email" class="form-label">Email <span class="required-asterisk">*</span></label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address"
-                required>
+              <input type="email" class="form-control" id="email" name="email"
+                placeholder="Enter your email address" required>
               <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
 
             <div class="mb-3">
               <label for="business" class="form-label">Business Name</label>
-              <input type="text" class="form-control" id="business" name="business" placeholder="Enter your business name, if you have one.">
+              <input type="text" class="form-control" id="business" name="business"
+                placeholder="Enter your business name, if you have one.">
             </div>
 
             <div class="mb-3">
@@ -171,9 +173,18 @@
             <button type="submit" class="btn btn-primary mt-4">Send Message</button>
             <p class="mt-2">We respect your privacy and will never share your information.</p>
           </form>
+
+          <!-- Thank-You Message (matches form style) -->
+          <div id="thankYouMessage" class="p-4 rounded shadow-sm bg-white text-center" style="display:none;">
+            <h2 class="mb-3">Thank You!</h2>
+            <p>Your message has been successfully sent. We’ll get back to you as soon as we can.</p>
+            <a href="contact.html" class="btn btn-primary mt-3">Send Another Message</a>
+          </div>
+
         </div>
       </div>
     </section>
+
 
 
   </main>
@@ -297,6 +308,10 @@
 
   <!-- Form Validation Script -->
   <script src="resources/js/formValidation.js"></script>
+
+  <!-- Form submission JS -->
+<script src="resources/js/formSubmit.js"></script>
+
 
 </body>
 
