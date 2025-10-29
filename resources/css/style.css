@@ -417,10 +417,6 @@
     filter: grayscale(50%) brightness(0.95);
   }
 
-  .social-icon {
-    font-size: var(--font-size-h3);
-  }
-
   #portrait {
     max-width: 200px;
   }
@@ -585,6 +581,10 @@
   box-shadow: none;
   outline: none;
 }
+
+ .thankyou {
+  background-color: var(--color-bg-tertiary);
+ }
   
   /* =======================
    Footer
