@@ -417,10 +417,6 @@
     filter: grayscale(50%) brightness(0.95);
   }
 
-  #portrait {
-    max-width: 200px;
-  }
-
   /* =======================
     Cards
    ======================= */
