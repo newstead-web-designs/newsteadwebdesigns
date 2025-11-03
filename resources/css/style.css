@@ -582,6 +582,94 @@
   background-color: var(--color-bg-tertiary);
  }
   
+/* =======================
+   Accordion Styles
+   ======================= */
+.accordion-item {
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-shadow);
+    margin-bottom: 1rem;
+    transition: all var(--transition-default);
+}
+
+.accordion-button {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-heading);
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text);
+    transition: background-color var(--transition-default), color var(--transition-default);
+}
+
+.accordion-button::after {
+    transition: transform var(--transition-default) ease, filter var(--transition-default), color var(--transition-default);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-brand-secondary);
+    box-shadow: none;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+    background-color: var(--color-bg-secondary);
+}
+
+.accordion-button:hover::after,
+.accordion-button:focus::after {
+    filter: brightness(1.3); 
+}
+
+.accordion-body {
+    line-height: var(--line-height-default);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text);
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
+}
+
+/* =======================
+   Dark Mode Accordion
+   ======================= */
+
+body.dark-mode .accordion-button {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text);
+}
+
+body.dark-mode .accordion-button::after {
+    filter: invert(1); 
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-accent-primary);
+}
+
+body.dark-mode .accordion-button:hover,
+body.dark-mode .accordion-button:focus {
+    background-color: var(--color-bg-secondary);
+}
+
+body.dark-mode .accordion-button:hover::after,
+body.dark-mode .accordion-button:focus::after {
+    filter: invert(1) brightness(1.3); 
+}
+
+
+
   /* =======================
    Footer
    ======================= */
