@@ -456,6 +456,14 @@
   }
 
   /* =======================
+  Ticks
+   ======================= */
+
+  .tick {
+    color: var(--color-brand-primary);
+  }
+
+  /* =======================
    Carousel
    ======================= */
 
@@ -557,116 +565,116 @@
     Contact Form
    ======================= */
 
-   .form-label,
-   ::placeholder {
+  .form-label,
+  ::placeholder {
     font-family: var(--font-body);
-   }
+  }
 
-   .form-label {
+  .form-label {
     color: var(--color-text);
-   }
+  }
 
   .required-asterisk {
     color: red;
     font-size: var(--font-size-h3);
   }
 
-  
-  form .form-control:focus {
-  border-color: var(--color-brand-secondary);
-  box-shadow: none;
-  outline: none;
-}
 
- .thankyou {
-  background-color: var(--color-bg-tertiary);
- }
-  
-/* =======================
+  form .form-control:focus {
+    border-color: var(--color-brand-secondary);
+    box-shadow: none;
+    outline: none;
+  }
+
+  .thankyou {
+    background-color: var(--color-bg-tertiary);
+  }
+
+  /* =======================
    Accordion Styles
    ======================= */
-.accordion-item {
+  .accordion-item {
     background-color: var(--color-bg-tertiary);
     border: 1px solid var(--color-shadow);
     margin-bottom: 1rem;
     transition: all var(--transition-default);
-}
+  }
 
-.accordion-button {
+  .accordion-button {
     font-family: var(--font-body);
     font-weight: var(--font-weight-heading);
     background-color: var(--color-bg-tertiary);
     color: var(--color-text);
     transition: background-color var(--transition-default), color var(--transition-default);
-}
+  }
 
-.accordion-button::after {
+  .accordion-button::after {
     transition: transform var(--transition-default) ease, filter var(--transition-default), color var(--transition-default);
-}
+  }
 
-.accordion-button:not(.collapsed)::after {
+  .accordion-button:not(.collapsed)::after {
     transform: rotate(180deg);
-}
+  }
 
-.accordion-button:not(.collapsed) {
+  .accordion-button:not(.collapsed) {
     background-color: var(--color-bg-secondary);
     color: var(--color-brand-secondary);
     box-shadow: none;
-}
+  }
 
-.accordion-button:hover,
-.accordion-button:focus {
+  .accordion-button:hover,
+  .accordion-button:focus {
     background-color: var(--color-bg-secondary);
-}
+  }
 
-.accordion-button:hover::after,
-.accordion-button:focus::after {
-    filter: brightness(1.3); 
-}
+  .accordion-button:hover::afte0..r,
+  .accordion-button:focus::after {
+    filter: brightness(1.3);
+  }
 
-.accordion-body {
+  .accordion-body {
     line-height: var(--line-height-default);
     background-color: var(--color-bg-primary);
     color: var(--color-text);
-}
+  }
 
-.accordion-button:focus {
+  .accordion-button:focus {
     outline: none;
     box-shadow: none;
-}
+  }
 
-.accordion-button:focus-visible {
+  .accordion-button:focus-visible {
     outline: none;
     box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
-}
+  }
 
-/* =======================
+  /* =======================
    Dark Mode Accordion
    ======================= */
 
-body.dark-mode .accordion-button {
+  body.dark-mode .accordion-button {
     background-color: var(--color-bg-tertiary);
     color: var(--color-text);
-}
+  }
 
-body.dark-mode .accordion-button::after {
-    filter: invert(1); 
-}
+  body.dark-mode .accordion-button::after {
+    filter: invert(1);
+  }
 
-body.dark-mode .accordion-button:not(.collapsed) {
+  body.dark-mode .accordion-button:not(.collapsed) {
     background-color: var(--color-bg-secondary);
     color: var(--color-accent-primary);
-}
+  }
 
-body.dark-mode .accordion-button:hover,
-body.dark-mode .accordion-button:focus {
+  body.dark-mode .accordion-button:hover,
+  body.dark-mode .accordion-button:focus {
     background-color: var(--color-bg-secondary);
-}
+  }
 
-body.dark-mode .accordion-button:hover::after,
-body.dark-mode .accordion-button:focus::after {
-    filter: invert(1) brightness(1.3); 
-}
+  body.dark-mode .accordion-button:hover::after,
+  body.dark-mode .accordion-button:focus::after {
+    filter: invert(1) brightness(1.3);
+  }
 
 
 
@@ -687,6 +695,55 @@ body.dark-mode .accordion-button:focus::after {
     font-size: var(--font-size-h5);
     font-weight: var(--font-weight-light);
   }
+
+  /* =======================
+  Cookie Consent
+   ======================= */
+
+  #cookieConsent {
+    background-color: var(--color-text);
+    color: var(--color-bg-primary);
+  }
+
+
+  #cookieConsent a {
+    text-decoration: none;
+    color: var(--color-bg-secondary);
+    transition: color var(--transition-default);
+  }
+
+  #cookieConsent a:hover,
+  #cookieConsent a:focus,
+  #cookieConsent a:focus-visible,
+  #cookieConsent a:active {
+    color: var(--color-bg-tertiary);
+  }
+
+  #cookieConsent a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem var(--color-bg-tertiary);
+  }
+
+  #cookieConsent .btn.btn-primary {
+    background-color: var(--color-bg-primary);
+    border: 2px solid var(--color-bg-primary);
+    color: var(--color-text);
+  }
+
+  #cookieConsent .btn.btn-primary:hover,
+  #cookieConsent .btn.btn-primary:focus,
+  #cookieConsent .btn.btn-primary:focus-visible,
+  #cookieConsent .btn.btn-primary:active {
+    background-color: var(--color-bg-secondary);
+    border: 2px solid var(--color-bg-secondary);
+    color: var(--color-text);
+  }
+
+  #cookieConsent .btn.btn-primary:focus-visible {
+
+    box-shadow: 0 0 0 0.25rem var(--color-bg-secondary);
+  }
+
 
   /* ================================
    Dark Mode Overrides
