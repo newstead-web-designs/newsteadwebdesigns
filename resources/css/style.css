@@ -418,8 +418,9 @@
   }
 
   /* =======================
-    Cards
+    Cards and Alerts
    ======================= */
+  .alert,
   .card {
     background-color: var(--color-bg-tertiary);
     color: var(--color-text);
@@ -427,24 +428,31 @@
     will-change: transform;
   }
 
+  .alert:hover,
   .card:hover {
     filter: drop-shadow(0 4px 10px var(--color-shadow));
     transform: scale(1.02);
   }
 
+  .alert i,
   .card i {
     color: var(--color-brand-primary);
   }
 
+  .alert i:hover,
   .card i:hover {
     color: var(--color-brand-secondary);
   }
 
+  
+  body.dark-mode .alert i,
   body.dark-mode .card i {
     color: var(--color-brand-primary);
     filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
   }
 
+  
+  body.dark-mode .alert i:hover,
   body.dark-mode .card i:hover {
     color: var(--color-accent-primary);
     filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
