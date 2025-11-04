@@ -42,15 +42,14 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f2f3eb;
   --color-bg-tertiary: #fffdf5;
-  --color-overlay-primary: rgba(242, 243, 235, 0.6);
-  /* #f2f3eb; */
-  --color-overlay-secondary: rgba(255, 255, 255, 0.6);
-  /* #ffffff; */
+  --color-overlay-primary: rgba(242, 243, 235, 0.6); /* #f2f3eb; */
+  --color-overlay-secondary: rgba(255, 255, 255, 0.6); /* #ffffff; */
   --color-brand-primary: #254030;
   --color-brand-secondary: #356e46;
   --color-accent-primary: #0c3c6e;
   --color-accent-secondary: #1c5797;
   --color-shadow: rgba(0, 0, 0, 0.15);
+  --color-required-asterisk: #b22222;
 
   /* =======================
    Dark Mode Variables
@@ -69,6 +68,7 @@
     --color-accent-primary: #fffbe0;
     --color-accent-secondary: #fff3a1;
     --color-shadow: rgba(255, 255, 255, 0.15);
+    --color-required-asterisk: #ff6666;
   }
 
   /* =======================
@@ -587,11 +587,10 @@ body.dark-mode .card i:not(li i):hover {
     color: var(--color-text);
   }
 
-  .required-asterisk {
-    color: red;
-    font-size: var(--font-size-h3);
-  }
-
+.required-asterisk {
+  color: var(--color-required-asterisk);
+  font-size: var(--font-size-h3); 
+}
 
   form .form-control:focus {
     border-color: var(--color-brand-secondary);
