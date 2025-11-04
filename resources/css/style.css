@@ -434,29 +434,30 @@
     transform: scale(1.02);
   }
 
-  .alert i,
-  .card i {
-    color: var(--color-brand-primary);
-  }
+ /* Icons in alerts and cards, excluding list items */
+.alert i:not(li i),
+.card i:not(li i) {
+  color: var(--color-brand-primary);
+}
 
-  .alert i:hover,
-  .card i:hover {
-    color: var(--color-brand-secondary);
-  }
+.alert i:not(li i):hover,
+.card i:not(li i):hover {
+  color: var(--color-brand-secondary);
+}
 
-  
-  body.dark-mode .alert i,
-  body.dark-mode .card i {
-    color: var(--color-brand-primary);
-    filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
-  }
+/* Dark mode */
+body.dark-mode .alert i:not(li i),
+body.dark-mode .card i:not(li i) {
+  color: var(--color-brand-primary);
+  filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
+}
 
-  
-  body.dark-mode .alert i:hover,
-  body.dark-mode .card i:hover {
-    color: var(--color-accent-primary);
-    filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
-  }
+body.dark-mode .alert i:not(li i):hover,
+body.dark-mode .card i:not(li i):hover {
+  color: var(--color-accent-primary);
+  filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
+}
+
 
   .blog .card {
     background-color: inherit;
