@@ -2,11 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButtons = [
     document.getElementById('darkModeToggleMobile'),
     document.getElementById('darkModeToggleDesktop')
-  ].filter(Boolean);
+  ].filter(Boolean); // Remove nulls
 
   const body = document.body;
   const navbar = document.querySelector('.navbar');
 
+  // Font Awesome icon classes
   const sunIconClass = "fas fa-sun";
   const moonIconClass = "fas fa-moon";
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconHTML = isDark
       ? `<i class="${sunIconClass}"></i>`
       : `<i class="${moonIconClass}"></i>`;
+
     toggleButtons.forEach(button => {
       button.innerHTML = iconHTML;
       button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
@@ -37,8 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // **Force dark mode as default**
-  applyDarkMode(true, true); // true = dark mode, save to localStorage
+  // Determine user/system preference
+  const darkModePreference = localStorage.getItem('darkMode');
+  if (darkModePreference === 'enabled') {
+    applyDarkMode(true);
+  } else if (darkModePreference === 'disabled') {
+    applyDarkMode(false);
+  } else {
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyDarkMode(systemPrefersDark);
+    localStorage.setItem('darkMode', systemPrefersDark ? 'enabled' : 'disabled');
+  }
 
   // Toggle dark mode on button click
   toggleButtons.forEach(button => {
@@ -47,4 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
       applyDarkMode(isNowDark, true);
     });
   });
+
+  // Optional: Live system preference changes (only if user hasn't set a preference)
+  if (!darkModePreference) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      applyDarkMode(e.matches);
+    });
+  }
 });
