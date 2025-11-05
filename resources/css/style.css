@@ -59,10 +59,8 @@
     --color-bg-primary: #000000;
     --color-bg-secondary: #0f1a0e;
     --color-bg-tertiary: #0f1a0e;
-    --color-overlay-primary: rgba(15, 26, 14, 0.6);
-    /* #0f1a0e; */
-    --color-overlay-secondary: rgba(0, 0, 0, 0.6);
-    /* #000000; */
+    --color-overlay-primary: rgba(15, 26, 14, 0.6); /* #0f1a0e; */
+    --color-overlay-secondary: rgba(0, 0, 0, 0.6); /* #000000; */
     --color-brand-primary: #fffdf5;
     --color-brand-secondary: #d4e6d4;
     --color-accent-primary: #fffbe0;
