@@ -353,7 +353,7 @@
   /* ==============================
    Hero Section
    ============================== */
-  .hero-section {
+  .hero {
     position: relative;
     background-image: url('../images/hero-bg.jpg');
     /* Photo by name_ gravity on Unsplash */
@@ -367,7 +367,7 @@
     text-align: center;
   }
 
-  .hero-section::before {
+  .hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -378,17 +378,17 @@
     z-index: 0;
   }
 
-  .hero-section>.row,
-  .hero-section h1,
-  .hero-section h2,
-  .hero-section h3,
-  .hero-section .btn {
+  .hero>.row,
+  .hero h1,
+  .hero h2,
+  .hero h3,
+  .hero .btn {
     position: relative;
     z-index: 1;
   }
 
-  .hero-section h2,
-  .hero-section h3 {
+  .hero h2,
+  .hero h3 {
     font-family: var(--font-body);
   }
 
@@ -758,7 +758,7 @@ body.dark-mode .card i:not(li i):hover {
    ================================ */
 
   /* Hero Section - Dark Mode */
-  body.dark-mode .hero-section {
+  body.dark-mode .hero {
     background-image: url('../images/hero-bg-dark.jpg');
     /* Photo by Mareks Steins on Unsplash */
   }
