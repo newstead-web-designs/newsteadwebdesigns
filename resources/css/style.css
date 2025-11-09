@@ -91,21 +91,13 @@
   h4,
   h5,
   h6 {
+    font-family: var(--font-heading);
     font-weight: var(--font-weight-heading);
     color: var(--color-brand-primary);
   }
-
+  
   h1 {
-    font-family: var(--font-heading);
     font-size: var(--font-size-h1);
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heading);
   }
 
   h2 {
@@ -135,7 +127,7 @@
 
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-primary);
   }
 
   a {
@@ -153,7 +145,7 @@
 
   a:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
 
@@ -182,7 +174,7 @@
 
   .navbar-brand:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
   body.dark-mode header .navbar-brand {
@@ -200,7 +192,7 @@
 
   body.dark-mode header .navbar-brand:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-accent-primary);
+    box-shadow: 0 0 0 0.125rem var(--color-accent-primary);
   }
 
   .navbar-nav .nav-link {
@@ -220,7 +212,7 @@
   .navbar-nav .nav-link:focus-visible {
     color: var(--color-brand-secondary);
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
   /* =======================
@@ -268,7 +260,7 @@
 
   .btn.btn-primary:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-secondary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
   .btn.btn-secondary {
@@ -288,7 +280,7 @@
 
   .btn.btn-secondary:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-primary);
   }
 
   /* =======================
@@ -317,7 +309,7 @@
 
   #menuToggle:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-bg-secondary);
+    box-shadow: 0 0 0 0.125rem var(--color-bg-secondary);
   }
 
   #toggleContainer {
@@ -347,7 +339,7 @@
   #darkModeToggleMobile:focus-visible,
   #darkModeToggleDesktop:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-accent-secondary);
+    box-shadow: 0 0 0 0.125rem var(--color-accent-secondary);
   }
 
   /* ==============================
@@ -587,7 +579,7 @@ body.dark-mode .card i:not(li i):hover {
 
 .required-asterisk {
   color: var(--color-required-asterisk);
-  font-size: var(--font-size-h3); 
+  font-size: var(--font-size-h3);
 }
 
   form .form-control:focus {
@@ -655,7 +647,7 @@ body.dark-mode .card i:not(li i):hover {
 
   .accordion-button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-brand-primary);
+    box-shadow: 0 0 0 0.125rem var(--color-brand-primary);
   }
 
   /* =======================
@@ -703,55 +695,6 @@ body.dark-mode .card i:not(li i):hover {
     font-size: var(--font-size-h5);
     font-weight: var(--font-weight-light);
   }
-
-  /* =======================
-  Cookie Consent
-   ======================= */
-
-  #cookieConsent {
-    background-color: var(--color-text);
-    color: var(--color-bg-primary);
-  }
-
-
-  #cookieConsent a {
-    text-decoration: none;
-    color: var(--color-bg-secondary);
-    transition: color var(--transition-default);
-  }
-
-  #cookieConsent a:hover,
-  #cookieConsent a:focus,
-  #cookieConsent a:focus-visible,
-  #cookieConsent a:active {
-    color: var(--color-bg-tertiary);
-  }
-
-  #cookieConsent a:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 0.25rem var(--color-bg-tertiary);
-  }
-
-  #cookieConsent .btn.btn-primary {
-    background-color: var(--color-bg-primary);
-    border: 2px solid var(--color-bg-primary);
-    color: var(--color-text);
-  }
-
-  #cookieConsent .btn.btn-primary:hover,
-  #cookieConsent .btn.btn-primary:focus,
-  #cookieConsent .btn.btn-primary:focus-visible,
-  #cookieConsent .btn.btn-primary:active {
-    background-color: var(--color-bg-secondary);
-    border: 2px solid var(--color-bg-secondary);
-    color: var(--color-text);
-  }
-
-  #cookieConsent .btn.btn-primary:focus-visible {
-
-    box-shadow: 0 0 0 0.25rem var(--color-bg-secondary);
-  }
-
 
   /* ================================
    Dark Mode Overrides
