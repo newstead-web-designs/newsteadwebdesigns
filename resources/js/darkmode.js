@@ -2,20 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButtons = [
     document.getElementById('darkModeToggleMobile'),
     document.getElementById('darkModeToggleDesktop')
-  ].filter(Boolean); // Remove nulls
+  ].filter(Boolean);
 
   const body = document.body;
   const navbar = document.querySelector('.navbar');
 
-  // Font Awesome icon classes
   const sunIconClass = "fas fa-sun";
   const moonIconClass = "fas fa-moon";
 
   function setIcon(isDark) {
-    const iconHTML = isDark
-      ? `<i class="${sunIconClass}"></i>`
-      : `<i class="${moonIconClass}"></i>`;
-
+    const iconHTML = isDark ? `<i class="${sunIconClass}"></i>` : `<i class="${moonIconClass}"></i>`;
     toggleButtons.forEach(button => {
       button.innerHTML = iconHTML;
       button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
@@ -30,16 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     navbar.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
   }
 
+  function setCarouselTheme(isDark) {
+    const controls = document.querySelectorAll('#carouselCaptions .carousel-control-prev, #carouselCaptions .carousel-control-next');
+    controls.forEach(control => control.setAttribute('data-bs-theme', isDark ? 'light' : 'dark'));
+
+    const indicators = document.querySelectorAll('#carouselCaptions .carousel-indicators button');
+    indicators.forEach(indicator => indicator.setAttribute('data-bs-theme', isDark ? 'light' : 'dark'));
+  }
+
   function applyDarkMode(isDark, save = false) {
     body.classList.toggle('dark-mode', isDark);
     setNavbarTheme(isDark);
     setIcon(isDark);
+    setCarouselTheme(isDark); // Update carousel controls & indicators only
     if (save) {
       localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
     }
   }
 
-  // Determine user/system preference
+  // Initial preference
   const darkModePreference = localStorage.getItem('darkMode');
   if (darkModePreference === 'enabled') {
     applyDarkMode(true);
@@ -51,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('darkMode', systemPrefersDark ? 'enabled' : 'disabled');
   }
 
-  // Toggle dark mode on button click
+  // Toggle on button click
   toggleButtons.forEach(button => {
     button.addEventListener('click', () => {
       const isNowDark = !body.classList.contains('dark-mode');
@@ -59,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Optional: Live system preference changes (only if user hasn't set a preference)
+  // Optional: live system preference changes
   if (!darkModePreference) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       applyDarkMode(e.matches);
