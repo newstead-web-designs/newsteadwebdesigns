@@ -394,12 +394,11 @@
   }
 
   .content img {
-    filter: grayscale(0%);
     transition: filter var(--transition-default);
   }
 
   .content img:hover {
-    filter: grayscale(50%) brightness(0.95);
+    filter: brightness(1.05);
   }
 
   /* =======================
