@@ -458,7 +458,7 @@ body.dark-mode .card i:not(li i):hover {
 
   .carousel-item img {
     height: auto;
-    max-width: 90%;
+    max-width: 100%;
     object-fit: cover;
     object-position: center;
   }
