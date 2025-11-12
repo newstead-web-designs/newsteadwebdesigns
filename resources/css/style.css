@@ -456,38 +456,20 @@ body.dark-mode .card i:not(li i):hover {
    Carousel
    ======================= */
 
+.carousel-item {
+  min-height: 60vh;
+}
+
+@media (min-width: 768px) {
+
+  /* tablets, laptops and desktops */
   .carousel-item {
-    height: 40vh;
-    /* default mobile */
+    min-height: 50vh;
   }
-
-  @media (min-width: 576px) {
-
-    /* tablets */
-    .carousel-item {
-      height: 50vh;
-    }
-  }
-
-  @media (min-width: 992px) {
-
-    /* laptops  */
-    .carousel-item {
-      height: 60vh;
-    }
-  }
-
-  @media (min-width: 1200px) {
-
-    /* desktops */
-    .carousel-item {
-      height: 70vh;
-    }
-  }
-
+}
   .carousel-item img {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    max-width: 80%;
     object-fit: cover;
     object-position: center;
   }
