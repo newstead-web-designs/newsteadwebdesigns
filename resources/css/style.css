@@ -453,19 +453,11 @@ body.dark-mode .card i:not(li i):hover {
   }
 
   /* =======================
-  Ticks
-   ======================= */
-
-  .tick {
-    color: var(--color-brand-primary);
-  }
-
-  /* =======================
    Carousel
    ======================= */
 
   .carousel-item {
-    height: 50vh;
+    height: 40vh;
     /* default mobile */
   }
 
@@ -473,7 +465,7 @@ body.dark-mode .card i:not(li i):hover {
 
     /* tablets */
     .carousel-item {
-      height: 60vh;
+      height: 50vh;
     }
   }
 
@@ -481,7 +473,7 @@ body.dark-mode .card i:not(li i):hover {
 
     /* laptops  */
     .carousel-item {
-      height: 70vh;
+      height: 60vh;
     }
   }
 
@@ -489,7 +481,7 @@ body.dark-mode .card i:not(li i):hover {
 
     /* desktops */
     .carousel-item {
-      height: 80vh;
+      height: 70vh;
     }
   }
 
