@@ -456,20 +456,9 @@ body.dark-mode .card i:not(li i):hover {
    Carousel
    ======================= */
 
-.carousel-item {
-  min-height: 40vh;
-}
-
-@media (min-width: 768px) {
-
-  /* tablets, laptops and desktops */
-  .carousel-item {
-    min-height: 50vh;
-  }
-}
   .carousel-item img {
     height: auto;
-    max-width: 80%;
+    max-width: 90%;
     object-fit: cover;
     object-position: center;
   }
