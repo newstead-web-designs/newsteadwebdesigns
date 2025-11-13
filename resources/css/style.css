@@ -445,9 +445,8 @@
     filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
   }
 
-
-  .blog .card {
-    background-color: inherit;
+  article .card {
+    background-color: var(--color-bg-primary);
   }
 
   .testimonials .card i:hover {
