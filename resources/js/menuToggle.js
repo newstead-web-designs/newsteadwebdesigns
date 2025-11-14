@@ -28,12 +28,7 @@ if (navbarToggler) {
   });
 }
 
-// Automatically close navbar when a nav link is clicked
-document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-  link.addEventListener('click', menuToggle);
-});
-
-// Reset icon when the Bootstrap collapse hides (for safety)
+// Reset icon when the Bootstrap collapse hides
 var navCollapse = document.querySelector('.navbar-collapse');
 if (navCollapse) {
   navCollapse.addEventListener('hidden.bs.collapse', function () {
