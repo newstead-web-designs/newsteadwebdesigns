@@ -339,8 +339,7 @@
    ============================== */
   .hero {
     position: relative;
-    background-image: url('../images/hero-bg.jpg');
-    /* Photo by name_ gravity on Unsplash */
+    background-image: url('../images/hero-bg.jpg'); /* Stock photo ID:1222529363 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
