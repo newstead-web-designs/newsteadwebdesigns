@@ -42,8 +42,10 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f2f3eb;
   --color-bg-tertiary: #fffdf5;
-  --color-overlay-primary: rgba(242, 243, 235, 0.7); /* #f2f3eb; */
-  --color-overlay-secondary: rgba(255, 255, 255, 0.7); /* #ffffff; */
+  --color-overlay-primary: rgba(242, 243, 235, 0.7);
+  /* #f2f3eb; */
+  --color-overlay-secondary: rgba(255, 255, 255, 0.7);
+  /* #ffffff; */
   --color-brand-primary: #254030;
   --color-brand-secondary: #356e46;
   --color-accent-primary: #0c3c6e;
@@ -58,8 +60,10 @@
     --color-bg-primary: #000000;
     --color-bg-secondary: #0f1a0e;
     --color-bg-tertiary: #0f1a0e;
-    --color-overlay-primary: rgba(15, 26, 14, 0.7); /* #0f1a0e; */
-    --color-overlay-secondary: rgba(0, 0, 0, 0.7); /* #000000; */
+    --color-overlay-primary: rgba(15, 26, 14, 0.7);
+    /* #0f1a0e; */
+    --color-overlay-secondary: rgba(0, 0, 0, 0.7);
+    /* #000000; */
     --color-brand-primary: #fffdf5;
     --color-brand-secondary: #d4e6d4;
     --color-accent-primary: #fffbe0;
@@ -339,7 +343,8 @@
    ============================== */
   .hero {
     position: relative;
-    background-image: url('../images/hero-bg.jpg'); /* Stock photo ID:1222529363 */
+    background-image: url('../images/hero-bg.jpg');
+    /* Stock photo ID:1222529363 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -518,6 +523,14 @@
   }
 
   /* =======================
+  Pricing
+   ======================= */
+
+   .gst {
+    font-size: var(--font-size-h5);
+   }
+
+  /* =======================
    Contact Form
    ======================= */
 
@@ -674,6 +687,7 @@
   body.dark-mode .accordion-button:focus::after {
     filter: invert(1) brightness(1.3);
   }
+
 
   /* =======================
    Footer
