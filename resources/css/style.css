@@ -4,7 +4,7 @@
 :root {
   /* Fonts */
   --font-body: "Raleway", "Verdana", "Arial", sans-serif;
-  --font-heading: "Bitter", "Georgia", "Times New Roman", serif;
+  --font-heading: "Montserrat", "Trebuchet MS", "Arial", serif;
 
   /* Font Sizes */
   --font-size-body: 16px;
@@ -40,14 +40,12 @@
   /* Colors - Light Mode */
   --color-text: #1a1a1a;
   --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f2f3eb;
-  --color-bg-tertiary: #fffdf5;
-  --color-overlay-primary: rgba(242, 243, 235, 0.7);
-  /* #f2f3eb; */
-  --color-overlay-secondary: rgba(255, 255, 255, 0.7);
-  /* #ffffff; */
-  --color-brand-primary: #254030;
-  --color-brand-secondary: #356e46;
+  --color-bg-secondary: #e4ede4;
+  --color-bg-tertiary: #f7f9f4;
+  --color-overlay-primary: rgba(228, 237, 228, 0.7); /* #e4ede4; */
+  --color-overlay-secondary: rgba(255, 255, 255, 0.7); /* #ffffff; */
+  --color-brand-primary: #2b3a2b;
+  --color-brand-secondary: #4a6542;
   --color-accent-primary: #0c3c6e;
   --color-accent-secondary: #1c5797;
   --color-required-asterisk: #b22222;
@@ -60,10 +58,8 @@
     --color-bg-primary: #000000;
     --color-bg-secondary: #0f1a0e;
     --color-bg-tertiary: #0f1a0e;
-    --color-overlay-primary: rgba(15, 26, 14, 0.7);
-    /* #0f1a0e; */
-    --color-overlay-secondary: rgba(0, 0, 0, 0.7);
-    /* #000000; */
+    --color-overlay-primary: rgba(15, 26, 14, 0.7); /* #0f1a0e; */
+    --color-overlay-secondary: rgba(0, 0, 0, 0.7); /* #000000; */
     --color-brand-primary: #fffdf5;
     --color-brand-secondary: #d4e6d4;
     --color-accent-primary: #fffbe0;
@@ -151,44 +147,21 @@
   }
 
   /* =======================
-   Navigation
+   Header and Navigation
    ======================= */
+
+   .logo {
+  height: 65px;
+}
+ 
   .navbar {
     background-color: var(--color-bg-secondary);
     transition: background-color var(--transition-default);
   }
 
-  .navbar-brand {
-    font-family: var(--font-heading);
-    font-weight: var(--font-weight-heading);
-    font-size: var(--font-size-h3);
-    color: var(--color-brand-primary);
-    transition: color var(--transition-default);
-  }
-
-  .navbar-brand:hover,
-  .navbar-brand:focus,
-  .navbar-brand:focus-visible,
-  .navbar-brand:active {
-    color: var(--color-brand-secondary);
-  }
-
   .navbar-brand:focus-visible {
     outline: none;
     box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
-  }
-
-  body.dark-mode header .navbar-brand {
-    color: var(--color-brand-primary);
-    filter: drop-shadow(0 0 4px var(--color-brand-primary)) brightness(1.1);
-  }
-
-  body.dark-mode header .navbar-brand:hover,
-  body.dark-mode header .navbar-brand:focus,
-  body.dark-mode header .navbar-brand:focus-visible,
-  body.dark-mode header .navbar-brand:active {
-    color: var(--color-accent-primary);
-    filter: drop-shadow(0 0 6px var(--color-accent-primary)) brightness(1.2);
   }
 
   body.dark-mode header .navbar-brand:focus-visible {
@@ -343,7 +316,7 @@
    ============================== */
   .hero {
     position: relative;
-    background-image: url('../images/hero-bg.jpg');
+    background-image: url('../images/hero.jpg');
     /* Stock photo ID:1222529363 */
     background-size: cover;
     background-position: center;
@@ -375,10 +348,6 @@
     z-index: 1;
   }
 
-  .hero h2,
-  .hero h3 {
-    font-family: var(--font-body);
-  }
 
   /* =======================
   Content
@@ -709,9 +678,15 @@
    Dark Mode Overrides
    ================================ */
 
+     /* Logo - Dark Mode */
+  body.dark-mode .logo {
+    content: url('../images/logo-dark.svg');
+    /* Photo by Mareks Steins on Unsplash */
+  }
+
   /* Hero Section - Dark Mode */
   body.dark-mode .hero {
-    background-image: url('../images/hero-bg-dark.jpg');
+    background-image: url('../images/hero-dark.jpg');
     /* Photo by Mareks Steins on Unsplash */
   }
 
