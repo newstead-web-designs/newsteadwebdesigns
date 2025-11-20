@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setCarouselTheme(isDark) {
-    const controls = document.querySelectorAll('#carouselCaptions .carousel-control-prev, #carouselCaptions .carousel-control-next');
+    const controls = document.querySelectorAll('#carouselIndicators .carousel-control-prev, #carouselIndicators .carousel-control-next');
     controls.forEach(control => control.setAttribute('data-bs-theme', isDark ? 'light' : 'dark'));
 
-    const indicators = document.querySelectorAll('#carouselCaptions .carousel-indicators button');
+    const indicators = document.querySelectorAll('#carouselIndicators .carousel-indicators button');
     indicators.forEach(indicator => indicator.setAttribute('data-bs-theme', isDark ? 'light' : 'dark'));
   }
 
