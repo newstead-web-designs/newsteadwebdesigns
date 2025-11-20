@@ -42,8 +42,10 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #e4ede4;
   --color-bg-tertiary: #f7f9f4;
-  --color-overlay-primary: rgba(228, 237, 228, 0.7); /* #e4ede4; */
-  --color-overlay-secondary: rgba(255, 255, 255, 0.7); /* #ffffff; */
+  --color-overlay-primary: rgba(228, 237, 228, 0.7);
+  /* #e4ede4; */
+  --color-overlay-secondary: rgba(255, 255, 255, 0.7);
+  /* #ffffff; */
   --color-brand-primary: #2b3a2b;
   --color-brand-secondary: #4a6542;
   --color-accent-primary: #0c3c6e;
@@ -58,8 +60,10 @@
     --color-bg-primary: #000000;
     --color-bg-secondary: #0f1a0e;
     --color-bg-tertiary: #0f1a0e;
-    --color-overlay-primary: rgba(15, 26, 14, 0.7); /* #0f1a0e; */
-    --color-overlay-secondary: rgba(0, 0, 0, 0.7); /* #000000; */
+    --color-overlay-primary: rgba(15, 26, 14, 0.7);
+    /* #0f1a0e; */
+    --color-overlay-secondary: rgba(0, 0, 0, 0.7);
+    /* #000000; */
     --color-brand-primary: #fffdf5;
     --color-brand-secondary: #d4e6d4;
     --color-accent-primary: #fffbe0;
@@ -150,10 +154,18 @@
    Header and Navigation
    ======================= */
 
-   .logo {
-  height: 65px;
-}
- 
+  .logo {
+    height: 65px;
+    /* default desktop */
+  }
+
+  /* Medium and smaller screens */
+  @media (max-width: 768px) {
+    .logo {
+      height: 50px;
+    }
+  }
+
   .navbar {
     background-color: var(--color-bg-secondary);
     transition: background-color var(--transition-default);
@@ -495,9 +507,9 @@
   Pricing
    ======================= */
 
-   .gst {
+  .gst {
     font-size: var(--font-size-h5);
-   }
+  }
 
   /* =======================
    Contact Form
@@ -678,7 +690,7 @@
    Dark Mode Overrides
    ================================ */
 
-     /* Logo - Dark Mode */
+  /* Logo - Dark Mode */
   body.dark-mode .logo {
     content: url('../images/logo-dark.svg');
     /* Photo by Mareks Steins on Unsplash */
