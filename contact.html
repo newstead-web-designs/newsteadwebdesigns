@@ -164,23 +164,30 @@
           <!-- Contact Form -->
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thankyou.html"
             class="needs-validation p-4 rounded shadow-sm" novalidate>
+
+            <!-- Netlify hidden input -->
             <input type="hidden" name="form-name" value="contact">
+
+            <!-- Honeypot for bots -->
             <p class="d-none">
               <label>Don't fill this out if you're human: <input name="bot-field"></label>
             </p>
 
+            <!-- Name -->
             <div class="mb-4">
               <label for="name" class="form-label">Name<span class="required-asterisk">*</span></label>
               <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
 
+            <!-- Email -->
             <div class="mb-4">
               <label for="email" class="form-label">Email<span class="required-asterisk">*</span></label>
               <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
               <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
 
+            <!-- Business Name -->
             <div class="mb-4">
               <label for="business" class="form-label">Business Name</label>
               <input type="text" class="form-control" id="business" name="business" placeholder="Business name">
@@ -239,6 +246,9 @@
               </div>
             </fieldset>
 
+            <input type="hidden" name="services_list" id="services_list">
+
+            <!-- Message -->
             <div class="mb-4">
               <label for="message" class="form-label">Message</label>
               <textarea class="form-control" id="message" name="message" rows="5"
@@ -367,6 +377,9 @@
 
   <!-- This Year Script -->
   <script src="resources/js/thisYear.js"></script>
+
+  <!-- This script ensures only the services the user selects are sent in the form -->
+  <script src="contact.js"></script>
 
   <!-- Form Validation Script -->
   <script src="resources/js/formValidation.js"></script>
