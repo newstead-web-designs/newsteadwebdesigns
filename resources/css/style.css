@@ -42,8 +42,10 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #e4ede4;
   --color-bg-tertiary: #f7f9f4;
-  --color-overlay-primary: rgba(228, 237, 228, 0.7); /* #e4ede4; */
-  --color-overlay-secondary: rgba(255, 255, 255, 0.7); /* #ffffff; */
+  --color-overlay-primary: rgba(228, 237, 228, 0.7);
+  /* #e4ede4; */
+  --color-overlay-secondary: rgba(255, 255, 255, 0.7);
+  /* #ffffff; */
   --color-brand-primary: #2b4a3e;
   --color-brand-secondary: #356157;
   --color-accent-primary: #0c3c6e;
@@ -58,8 +60,10 @@
     --color-bg-primary: #000000;
     --color-bg-secondary: #091d17;
     --color-bg-tertiary: #091d17;
-    --color-overlay-primary: rgba(9, 29, 23, 0.7); /* #091d17; */
-    --color-overlay-secondary: rgba(0, 0, 0, 0.7); /* #000000; */
+    --color-overlay-primary: rgba(9, 29, 23, 0.7);
+    /* #091d17; */
+    --color-overlay-secondary: rgba(0, 0, 0, 0.7);
+    /* #000000; */
     --color-brand-primary: #f7f9f4;
     --color-brand-secondary: #e4ede4;
     --color-accent-primary: #fffbe0;
@@ -332,8 +336,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     text-align: center;
+  }
+
+  /* Desktop screens */
+  @media (min-width: 1200px) {
+    .hero {
+      min-height: 80vh;
+    }
   }
 
   .hero::before {
