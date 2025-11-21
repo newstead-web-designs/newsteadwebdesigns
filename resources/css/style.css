@@ -341,7 +341,7 @@
   }
 
   /* Desktop screens */
-  @media (min-width: 992x){
+  @media (min-width: 768px){
     .hero {
       min-height: 80vh;
     }
