@@ -56,9 +56,9 @@
   body.dark-mode {
     --color-text: #ffffff;
     --color-bg-primary: #000000;
-    --color-bg-secondary: #0f1a0e;
-    --color-bg-tertiary: #0f1a0e;
-    --color-overlay-primary: rgba(15, 26, 14, 0.7); /* #0f1a0e; */
+    --color-bg-secondary: #091d17;
+    --color-bg-tertiary: #091d17;
+    --color-overlay-primary: rgba(9, 29, 23, 0.7); /* #091d17; */
     --color-overlay-secondary: rgba(0, 0, 0, 0.7); /* #000000; */
     --color-brand-primary: #f7f9f4;
     --color-brand-secondary: #e4ede4;
