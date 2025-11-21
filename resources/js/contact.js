@@ -1,22 +1,29 @@
-// Grab form, checkboxes, and hidden field
+// Grab the form element
 const form = document.querySelector('form[name="contact"]');
-const checkboxes = document.querySelectorAll('.form-check-input'); // UI only
-const hiddenField = document.getElementById('services_list'); // Sent to Netlify
 
-// Function to update hidden field with selected services
+// Grab all the service checkboxes (UI only)
+const checkboxes = document.querySelectorAll('.form-check-input');
+
+// Grab the hidden field that will be sent to Netlify
+const hiddenField = document.getElementById('services_list');
+
+/**
+ * Updates the hidden field with only the selected services.
+ * Each service is formatted as a bullet and separated by a single newline.
+ */
 function updateHiddenField() {
   const selected = Array.from(checkboxes)
-    .filter(cb => cb.checked)       // Only checked boxes
-    .map(cb => `- ${cb.value}`);    // Format as bullets
+    .filter(cb => cb.checked)        // Only checked boxes
+    .map(cb => `- ${cb.value}`);     // Bullet formatting
 
-  hiddenField.value = selected.join('\n'); // Joins with line breaks
+  hiddenField.value = selected.join('\n'); // Join bullets with single newline
 }
 
-// Update hidden field on any checkbox change
+// Listen for checkbox changes to update the hidden field in real-time
 checkboxes.forEach(cb => cb.addEventListener('change', updateHiddenField));
 
-// Ensure hidden field is populated before submission
+// Ensure hidden field is updated before form submission
 form.addEventListener('submit', updateHiddenField);
 
-// Initialize on page load in case any boxes are pre-checked
+// Initialize hidden field on page load (in case of pre-checked boxes)
 updateHiddenField();
