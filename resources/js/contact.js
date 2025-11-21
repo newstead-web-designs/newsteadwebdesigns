@@ -1,17 +1,23 @@
-// Grab all checkboxes and hidden field
+// Grab form, checkboxes, and hidden field
+const form = document.querySelector('form[name="contact"]');
 const checkboxes = document.querySelectorAll('input[name="services[]"]');
 const hiddenField = document.getElementById('services_list');
 
-// Function to update hidden field with checked services
+// Function to update hidden field with selected services
 function updateHiddenField() {
   const selected = Array.from(checkboxes)
     .filter(cb => cb.checked)
-    .map(cb => `- ${cb.value}`); // Bullet formatting
-  hiddenField.value = selected.join('\n'); // Each service on a new line
+    .map(cb => `- ${cb.value}`); // bullet formatting
+
+  // Populate hidden field; if none selected, leave it empty
+  hiddenField.value = selected.join('\n');
 }
 
-// Add event listeners to all checkboxes
+// Update hidden field on checkbox change
 checkboxes.forEach(cb => cb.addEventListener('change', updateHiddenField));
 
-// Run once on page load in case any boxes are pre-checked
+// Ensure hidden field is populated before submission
+form.addEventListener('submit', updateHiddenField);
+
+// Initialize on page load
 updateHiddenField();
